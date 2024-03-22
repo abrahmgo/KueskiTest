@@ -18,6 +18,9 @@
          location = "group:Core"
          name = "Core">
          <FileRef
+            location = "group:APICore/APICore.xcodeproj">
+         </FileRef>
+         <FileRef
             location = "group:NetworkCore/NetworkCore.xcodeproj">
          </FileRef>
       </Group>
