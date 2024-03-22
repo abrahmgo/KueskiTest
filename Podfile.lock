@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (5.9.0)
+  - Nuke (10.7.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - Nuke
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Nuke
+
+SPEC CHECKSUMS:
+  Alamofire: 02b772c9910e8eba1a079227c32fbd9e46c90a24
+  Nuke: 279f17a599fd1c83cf51de5e0e1f2db143a287b0
+
+PODFILE CHECKSUM: 4686d683e222a15aefb92cae76e2f6dc63ae4f86
+
+COCOAPODS: 1.15.2
