@@ -14,6 +14,8 @@
 		B62E826D2BAD334E00FED650 /* TheMovieDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E826C2BAD334E00FED650 /* TheMovieDBTests.swift */; };
 		B62E82772BAD334E00FED650 /* TheMovieDBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E82762BAD334E00FED650 /* TheMovieDBUITests.swift */; };
 		B62E82792BAD334E00FED650 /* TheMovieDBUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E82782BAD334E00FED650 /* TheMovieDBUITestsLaunchTests.swift */; };
+		B62E82A92BAD34E300FED650 /* NetworkCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B62E82A82BAD34E300FED650 /* NetworkCore.framework */; };
+		B62E82AA2BAD34E300FED650 /* NetworkCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B62E82A82BAD34E300FED650 /* NetworkCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B62E82AB2BAD34E300FED650 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B62E82AA2BAD34E300FED650 /* NetworkCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		B62E82572BAD334C00FED650 /* TheMovieDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheMovieDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62E825A2BAD334C00FED650 /* TheMovieDBApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieDBApp.swift; sourceTree = "<group>"; };
@@ -45,6 +61,7 @@
 		B62E82722BAD334E00FED650 /* TheMovieDBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheMovieDBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62E82762BAD334E00FED650 /* TheMovieDBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieDBUITests.swift; sourceTree = "<group>"; };
 		B62E82782BAD334E00FED650 /* TheMovieDBUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieDBUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B62E82A82BAD34E300FED650 /* NetworkCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B62E82A92BAD34E300FED650 /* NetworkCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +97,7 @@
 				B62E826B2BAD334E00FED650 /* TheMovieDBTests */,
 				B62E82752BAD334E00FED650 /* TheMovieDBUITests */,
 				B62E82582BAD334C00FED650 /* Products */,
+				B62E82A72BAD34E300FED650 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +148,14 @@
 			path = TheMovieDBUITests;
 			sourceTree = "<group>";
 		};
+		B62E82A72BAD34E300FED650 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B62E82A82BAD34E300FED650 /* NetworkCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,6 +166,7 @@
 				B62E82532BAD334C00FED650 /* Sources */,
 				B62E82542BAD334C00FED650 /* Frameworks */,
 				B62E82552BAD334C00FED650 /* Resources */,
+				B62E82AB2BAD34E300FED650 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -440,10 +468,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = andres.com.TheMovieDB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -476,10 +505,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = andres.com.TheMovieDB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

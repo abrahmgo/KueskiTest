@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "group:Data"
+      name = "Data">
+      <Group
+         location = "group:Core"
+         name = "Core">
+         <FileRef
+            location = "group:NetworkCore/NetworkCore.xcodeproj">
+         </FileRef>
+      </Group>
+   </Group>
    <FileRef
       location = "group:Apps/TheMovieDB/TheMovieDB.xcodeproj">
    </FileRef>
