@@ -16,6 +16,18 @@
 		B62E82792BAD334E00FED650 /* TheMovieDBUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E82782BAD334E00FED650 /* TheMovieDBUITestsLaunchTests.swift */; };
 		B62E82A92BAD34E300FED650 /* NetworkCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B62E82A82BAD34E300FED650 /* NetworkCore.framework */; };
 		B62E82AA2BAD34E300FED650 /* NetworkCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B62E82A82BAD34E300FED650 /* NetworkCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B62E83572BAD36F800FED650 /* Analytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B62E83562BAD36F800FED650 /* Analytics.framework */; };
+		B62E83582BAD36F800FED650 /* Analytics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B62E83562BAD36F800FED650 /* Analytics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B62E835A2BAD36FC00FED650 /* CoreDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B62E83592BAD36FC00FED650 /* CoreDataSource.framework */; };
+		B62E835B2BAD36FC00FED650 /* CoreDataSource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B62E83592BAD36FC00FED650 /* CoreDataSource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B62E835D2BAD370200FED650 /* CoreEntities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B62E835C2BAD370200FED650 /* CoreEntities.framework */; };
+		B62E835E2BAD370200FED650 /* CoreEntities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B62E835C2BAD370200FED650 /* CoreEntities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B62E83602BAD370700FED650 /* Analytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B62E835F2BAD370700FED650 /* Analytics.framework */; };
+		B62E83612BAD370700FED650 /* Analytics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B62E835F2BAD370700FED650 /* Analytics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B62E83632BAD370D00FED650 /* CoreUseCases.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B62E83622BAD370D00FED650 /* CoreUseCases.framework */; };
+		B62E83642BAD370D00FED650 /* CoreUseCases.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B62E83622BAD370D00FED650 /* CoreUseCases.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B62E83662BAD371300FED650 /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B62E83652BAD371300FED650 /* UI.framework */; };
+		B62E83672BAD371300FED650 /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B62E83652BAD371300FED650 /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +54,13 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B62E83612BAD370700FED650 /* Analytics.framework in Embed Frameworks */,
+				B62E835E2BAD370200FED650 /* CoreEntities.framework in Embed Frameworks */,
 				B62E82AA2BAD34E300FED650 /* NetworkCore.framework in Embed Frameworks */,
+				B62E83642BAD370D00FED650 /* CoreUseCases.framework in Embed Frameworks */,
+				B62E835B2BAD36FC00FED650 /* CoreDataSource.framework in Embed Frameworks */,
+				B62E83582BAD36F800FED650 /* Analytics.framework in Embed Frameworks */,
+				B62E83672BAD371300FED650 /* UI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +80,12 @@
 		B62E82762BAD334E00FED650 /* TheMovieDBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieDBUITests.swift; sourceTree = "<group>"; };
 		B62E82782BAD334E00FED650 /* TheMovieDBUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieDBUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B62E82A82BAD34E300FED650 /* NetworkCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B62E83562BAD36F800FED650 /* Analytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Analytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B62E83592BAD36FC00FED650 /* CoreDataSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreDataSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B62E835C2BAD370200FED650 /* CoreEntities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreEntities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B62E835F2BAD370700FED650 /* Analytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Analytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B62E83622BAD370D00FED650 /* CoreUseCases.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreUseCases.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B62E83652BAD371300FED650 /* UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +93,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B62E83602BAD370700FED650 /* Analytics.framework in Frameworks */,
+				B62E835D2BAD370200FED650 /* CoreEntities.framework in Frameworks */,
 				B62E82A92BAD34E300FED650 /* NetworkCore.framework in Frameworks */,
+				B62E83632BAD370D00FED650 /* CoreUseCases.framework in Frameworks */,
+				B62E835A2BAD36FC00FED650 /* CoreDataSource.framework in Frameworks */,
+				B62E83572BAD36F800FED650 /* Analytics.framework in Frameworks */,
+				B62E83662BAD371300FED650 /* UI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +181,12 @@
 		B62E82A72BAD34E300FED650 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B62E83652BAD371300FED650 /* UI.framework */,
+				B62E83622BAD370D00FED650 /* CoreUseCases.framework */,
+				B62E835F2BAD370700FED650 /* Analytics.framework */,
+				B62E835C2BAD370200FED650 /* CoreEntities.framework */,
+				B62E83592BAD36FC00FED650 /* CoreDataSource.framework */,
+				B62E83562BAD36F800FED650 /* Analytics.framework */,
 				B62E82A82BAD34E300FED650 /* NetworkCore.framework */,
 			);
 			name = Frameworks;

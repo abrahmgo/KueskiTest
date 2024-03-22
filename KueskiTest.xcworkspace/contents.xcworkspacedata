@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <FileRef
+      location = "group:Apps/TheMovieDB/TheMovieDB.xcodeproj">
+   </FileRef>
    <Group
       location = "group:Data"
       name = "Data">
+      <Group
+         location = "group:/Users/andresbogo/Documents/Proyectos/KueskiTest/Data/Gateways"
+         name = "Gateways">
+         <FileRef
+            location = "group:CoreDataSource/CoreDataSource.xcodeproj">
+         </FileRef>
+      </Group>
       <Group
          location = "group:Core"
          name = "Core">
@@ -12,7 +22,36 @@
          </FileRef>
       </Group>
    </Group>
-   <FileRef
-      location = "group:Apps/TheMovieDB/TheMovieDB.xcodeproj">
-   </FileRef>
+   <Group
+      location = "group:UI"
+      name = "UI">
+      <FileRef
+         location = "group:UI/UI.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:Domain"
+      name = "Domain">
+      <Group
+         location = "group:UseCases"
+         name = "UseCases">
+         <FileRef
+            location = "group:CoreUseCases/CoreUseCases.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Entities"
+         name = "Entities">
+         <FileRef
+            location = "group:CoreEntities/CoreEntities.xcodeproj">
+         </FileRef>
+      </Group>
+   </Group>
+   <Group
+      location = "group:Common"
+      name = "Common">
+      <FileRef
+         location = "group:Analytics/Analytics.xcodeproj">
+      </FileRef>
+   </Group>
 </Workspace>
