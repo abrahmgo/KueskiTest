@@ -29,6 +29,10 @@
 		B62E83642BAD370D00FED650 /* CoreUseCases.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B62E83622BAD370D00FED650 /* CoreUseCases.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B62E83662BAD371300FED650 /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B62E83652BAD371300FED650 /* UI.framework */; };
 		B62E83672BAD371300FED650 /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B62E83652BAD371300FED650 /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B68F49AC2BAF5339002655DD /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68F49AB2BAF5339002655DD /* APIConfig.swift */; };
+		B68F49AE2BAF5364002655DD /* APIBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68F49AD2BAF5364002655DD /* APIBundle.swift */; };
+		B68F49B22BAF542D002655DD /* APICore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68F49B12BAF542D002655DD /* APICore.framework */; };
+		B68F49B32BAF542D002655DD /* APICore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B68F49B12BAF542D002655DD /* APICore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B68F49B32BAF542D002655DD /* APICore.framework in Embed Frameworks */,
 				B62E83612BAD370700FED650 /* Analytics.framework in Embed Frameworks */,
 				B62E835E2BAD370200FED650 /* CoreEntities.framework in Embed Frameworks */,
 				B62E82AA2BAD34E300FED650 /* NetworkCore.framework in Embed Frameworks */,
@@ -90,6 +95,9 @@
 		B62E835F2BAD370700FED650 /* Analytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Analytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62E83622BAD370D00FED650 /* CoreUseCases.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreUseCases.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62E83652BAD371300FED650 /* UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B68F49AB2BAF5339002655DD /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
+		B68F49AD2BAF5364002655DD /* APIBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBundle.swift; sourceTree = "<group>"; };
+		B68F49B12BAF542D002655DD /* APICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +112,7 @@
 				B62E835A2BAD36FC00FED650 /* CoreDataSource.framework in Frameworks */,
 				B62E83572BAD36F800FED650 /* Analytics.framework in Frameworks */,
 				B62E83662BAD371300FED650 /* UI.framework in Frameworks */,
+				B68F49B22BAF542D002655DD /* APICore.framework in Frameworks */,
 				40F04A03BBA9FEB1B96130A6 /* Pods_TheMovieDB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,6 +159,7 @@
 		B62E82592BAD334C00FED650 /* TheMovieDB */ = {
 			isa = PBXGroup;
 			children = (
+				B68F49AA2BAF532F002655DD /* Config */,
 				B62E825A2BAD334C00FED650 /* TheMovieDBApp.swift */,
 				B62E825C2BAD334C00FED650 /* ContentView.swift */,
 				B62E825E2BAD334E00FED650 /* Assets.xcassets */,
@@ -187,6 +197,7 @@
 		B62E82A72BAD34E300FED650 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B68F49B12BAF542D002655DD /* APICore.framework */,
 				B62E83652BAD371300FED650 /* UI.framework */,
 				B62E83622BAD370D00FED650 /* CoreUseCases.framework */,
 				B62E835F2BAD370700FED650 /* Analytics.framework */,
@@ -197,6 +208,15 @@
 				4D502D432B8E44407D48D30B /* Pods_TheMovieDB.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B68F49AA2BAF532F002655DD /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				B68F49AB2BAF5339002655DD /* APIConfig.swift */,
+				B68F49AD2BAF5364002655DD /* APIBundle.swift */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		F0C54857A2FB381BE600F7FB /* Pods */ = {
@@ -386,6 +406,8 @@
 			files = (
 				B62E825D2BAD334C00FED650 /* ContentView.swift in Sources */,
 				B62E825B2BAD334C00FED650 /* TheMovieDBApp.swift in Sources */,
+				B68F49AE2BAF5364002655DD /* APIBundle.swift in Sources */,
+				B68F49AC2BAF5339002655DD /* APIConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,7 +581,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.6;
@@ -598,7 +620,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.6;

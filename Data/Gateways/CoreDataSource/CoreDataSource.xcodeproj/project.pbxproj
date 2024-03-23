@@ -10,6 +10,8 @@
 		B62E82BF2BAD362500FED650 /* CoreDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B62E82B62BAD362500FED650 /* CoreDataSource.framework */; };
 		B62E82C42BAD362500FED650 /* CoreDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E82C32BAD362500FED650 /* CoreDataSourceTests.swift */; };
 		B62E82C52BAD362500FED650 /* CoreDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = B62E82B92BAD362500FED650 /* CoreDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B68F499C2BAF3DA4002655DD /* PopularMoviesRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68F499B2BAF3DA4002655DD /* PopularMoviesRemoteDataSource.swift */; };
+		B68F49A12BAF3E80002655DD /* CoreEntities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68F49A02BAF3E80002655DD /* CoreEntities.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,8 @@
 		B62E82B92BAD362500FED650 /* CoreDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataSource.h; sourceTree = "<group>"; };
 		B62E82BE2BAD362500FED650 /* CoreDataSourceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataSourceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62E82C32BAD362500FED650 /* CoreDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSourceTests.swift; sourceTree = "<group>"; };
+		B68F499B2BAF3DA4002655DD /* PopularMoviesRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesRemoteDataSource.swift; sourceTree = "<group>"; };
+		B68F49A02BAF3E80002655DD /* CoreEntities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreEntities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B68F49A12BAF3E80002655DD /* CoreEntities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +59,7 @@
 				B62E82B82BAD362500FED650 /* CoreDataSource */,
 				B62E82C22BAD362500FED650 /* CoreDataSourceTests */,
 				B62E82B72BAD362500FED650 /* Products */,
+				B68F499F2BAF3E80002655DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +75,7 @@
 		B62E82B82BAD362500FED650 /* CoreDataSource */ = {
 			isa = PBXGroup;
 			children = (
+				B68F499A2BAF3D95002655DD /* Remote */,
 				B62E82B92BAD362500FED650 /* CoreDataSource.h */,
 			);
 			path = CoreDataSource;
@@ -80,6 +87,22 @@
 				B62E82C32BAD362500FED650 /* CoreDataSourceTests.swift */,
 			);
 			path = CoreDataSourceTests;
+			sourceTree = "<group>";
+		};
+		B68F499A2BAF3D95002655DD /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				B68F499B2BAF3DA4002655DD /* PopularMoviesRemoteDataSource.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		B68F499F2BAF3E80002655DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B68F49A02BAF3E80002655DD /* CoreEntities.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +167,7 @@
 				TargetAttributes = {
 					B62E82B52BAD362500FED650 = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 					};
 					B62E82BD2BAD362500FED650 = {
 						CreatedOnToolsVersion = 15.2;
@@ -191,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B68F499C2BAF3DA4002655DD /* PopularMoviesRemoteDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +366,7 @@
 		B62E82C92BAD362500FED650 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -363,6 +389,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -371,6 +398,7 @@
 		B62E82CA2BAD362500FED650 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -401,6 +429,7 @@
 		B62E82CC2BAD362500FED650 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -416,6 +445,7 @@
 		B62E82CD2BAD362500FED650 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
