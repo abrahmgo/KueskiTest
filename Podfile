@@ -45,6 +45,14 @@ target 'UI' do
   ui
 end
 
+plugin 'cocoapods-keys', {
+  :project => "TheMovieDB",
+  :keys => [
+    "api_token",
+    "api_key"
+  ]
+}
+
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|

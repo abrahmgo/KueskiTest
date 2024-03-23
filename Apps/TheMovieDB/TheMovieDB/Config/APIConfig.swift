@@ -6,6 +6,7 @@
 //
 
 import NetworkCore
+import Keys
 
 struct APIConfig: NetworkCoreAPIConfigType {
     
@@ -30,7 +31,7 @@ struct APIConfig: NetworkCoreAPIConfigType {
     
     static var additionalHeaders: [String: String] {
         return ["Content-Type": "application/x-www-form-urlencoded",
-                "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmMmM2NTgwZjdkNzdkMjYwOWE0ODY1MDI0MTI4Y2JmNiIsInN1YiI6IjY1ZmNmNmJjYmU2ZDg4MDE3ZGIxY2NjYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.c-X-b86zzR9gHbifB_cfNyONZsa3uVg11wa2CHlIi3Y"]
+                "Authorization": "Bearer \(TheMovieDBKeys().api_token)"]
     }
 }
 
