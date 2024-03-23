@@ -8,6 +8,7 @@
 import SwiftUI
 import APICore
 import CoreEntities
+import CoreUseCases
 
 struct ContentView: View {
     var body: some View {
@@ -19,10 +20,18 @@ struct ContentView: View {
         }
         .padding()
         .onAppear {
+            let usecase = GetPopularMoviesWPaginationUseCase()
             Task {
                 let model = PopularMoviesRequest(includeAdult: false, includeVideo: false, language: .us, page: 1, sort: .popularityDesc)
-                let data = try? await CoreRemoteDataSource.popularMoviesAPI.execute(model: model)
+                let data = try? await usecase.execute(model: model)
                 dump(data)
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                Task {
+                    let model = PopularMoviesRequest(includeAdult: false, includeVideo: false, language: .us, page: 1, sort: .popularityDesc)
+                    let data = try? await usecase.execute(model: model)
+                    dump(data)
+                }
             }
         }
     }

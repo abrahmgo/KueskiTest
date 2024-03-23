@@ -16,7 +16,7 @@ public struct PopularMoviesRequest {
     public let sort: TheMovieDBSort
     
     public init(includeAdult: Bool, includeVideo: Bool,
-                language: TheMovieDBLanguage, page: Int,
+                language: TheMovieDBLanguage, page: Int = 0,
                 sort: TheMovieDBSort) {
         self.includeAdult = includeAdult
         self.includeVideo = includeVideo

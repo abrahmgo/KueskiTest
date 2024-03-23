@@ -10,6 +10,10 @@
 		B62E83032BAD369200FED650 /* CoreUseCases.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B62E82FA2BAD369200FED650 /* CoreUseCases.framework */; };
 		B62E83082BAD369200FED650 /* CoreUseCasesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E83072BAD369200FED650 /* CoreUseCasesTests.swift */; };
 		B62E83092BAD369200FED650 /* CoreUseCases.h in Headers */ = {isa = PBXBuildFile; fileRef = B62E82FD2BAD369200FED650 /* CoreUseCases.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B68F49B92BAF596D002655DD /* GetPopularMoviesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68F49B82BAF596D002655DD /* GetPopularMoviesUseCase.swift */; };
+		B68F49BC2BAF5978002655DD /* CoreDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68F49BB2BAF5978002655DD /* CoreDataSource.framework */; };
+		B68F49C02BAF5986002655DD /* CoreEntities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68F49BF2BAF5986002655DD /* CoreEntities.framework */; };
+		B68F49C42BAF5990002655DD /* APICore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68F49C32BAF5990002655DD /* APICore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +31,10 @@
 		B62E82FD2BAD369200FED650 /* CoreUseCases.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreUseCases.h; sourceTree = "<group>"; };
 		B62E83022BAD369200FED650 /* CoreUseCasesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreUseCasesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62E83072BAD369200FED650 /* CoreUseCasesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreUseCasesTests.swift; sourceTree = "<group>"; };
+		B68F49B82BAF596D002655DD /* GetPopularMoviesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPopularMoviesUseCase.swift; sourceTree = "<group>"; };
+		B68F49BB2BAF5978002655DD /* CoreDataSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreDataSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B68F49BF2BAF5986002655DD /* CoreEntities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreEntities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B68F49C32BAF5990002655DD /* APICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B68F49C02BAF5986002655DD /* CoreEntities.framework in Frameworks */,
+				B68F49C42BAF5990002655DD /* APICore.framework in Frameworks */,
+				B68F49BC2BAF5978002655DD /* CoreDataSource.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +65,7 @@
 				B62E82FC2BAD369200FED650 /* CoreUseCases */,
 				B62E83062BAD369200FED650 /* CoreUseCasesTests */,
 				B62E82FB2BAD369200FED650 /* Products */,
+				B68F49BA2BAF5978002655DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +81,7 @@
 		B62E82FC2BAD369200FED650 /* CoreUseCases */ = {
 			isa = PBXGroup;
 			children = (
+				B68F49B72BAF595A002655DD /* Remote */,
 				B62E82FD2BAD369200FED650 /* CoreUseCases.h */,
 			);
 			path = CoreUseCases;
@@ -80,6 +93,24 @@
 				B62E83072BAD369200FED650 /* CoreUseCasesTests.swift */,
 			);
 			path = CoreUseCasesTests;
+			sourceTree = "<group>";
+		};
+		B68F49B72BAF595A002655DD /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				B68F49B82BAF596D002655DD /* GetPopularMoviesUseCase.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		B68F49BA2BAF5978002655DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B68F49C32BAF5990002655DD /* APICore.framework */,
+				B68F49BF2BAF5986002655DD /* CoreEntities.framework */,
+				B68F49BB2BAF5978002655DD /* CoreDataSource.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +175,7 @@
 				TargetAttributes = {
 					B62E82F92BAD369200FED650 = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 					};
 					B62E83012BAD369200FED650 = {
 						CreatedOnToolsVersion = 15.2;
@@ -191,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B68F49B92BAF596D002655DD /* GetPopularMoviesUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +374,7 @@
 		B62E830D2BAD369200FED650 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -363,6 +397,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -371,6 +406,7 @@
 		B62E830E2BAD369200FED650 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -401,6 +437,7 @@
 		B62E83102BAD369200FED650 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -416,6 +453,7 @@
 		B62E83112BAD369200FED650 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
