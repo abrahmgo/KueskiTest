@@ -1,17 +1,14 @@
 PODS:
   - Alamofire (5.9.0)
   - Keys (1.0.1)
-  - Nuke (10.7.1)
 
 DEPENDENCIES:
   - Alamofire
   - Keys (from `Pods/CocoaPodsKeys`)
-  - Nuke
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - Nuke
 
 EXTERNAL SOURCES:
   Keys:
@@ -20,8 +17,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Alamofire: 02b772c9910e8eba1a079227c32fbd9e46c90a24
   Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
-  Nuke: 279f17a599fd1c83cf51de5e0e1f2db143a287b0
 
-PODFILE CHECKSUM: b2eb1ba14987a014670a1ebdc95b91764a544467
+PODFILE CHECKSUM: e78e079dd96d3f1b1318860284e5e184c76c2fee
 
 COCOAPODS: 1.15.2

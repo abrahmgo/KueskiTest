@@ -7,15 +7,10 @@ def networking
   pod 'Alamofire'
 end
 
-def ui
-  pod 'Nuke'
-end
-
 target 'TheMovieDB' do
   project 'Apps/TheMovieDB/TheMovieDB'
   
   networking
-  ui
   
 end
 
@@ -41,8 +36,7 @@ end
 
 target 'UI' do
   project 'UI/UI/UI'
-  
-  ui
+
 end
 
 plugin 'cocoapods-keys', {

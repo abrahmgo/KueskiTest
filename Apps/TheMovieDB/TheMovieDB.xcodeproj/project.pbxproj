@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		40F04A03BBA9FEB1B96130A6 /* Pods_TheMovieDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D502D432B8E44407D48D30B /* Pods_TheMovieDB.framework */; };
 		B62E825B2BAD334C00FED650 /* TheMovieDBApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E825A2BAD334C00FED650 /* TheMovieDBApp.swift */; };
-		B62E825D2BAD334C00FED650 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E825C2BAD334C00FED650 /* ContentView.swift */; };
 		B62E825F2BAD334E00FED650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B62E825E2BAD334E00FED650 /* Assets.xcassets */; };
 		B62E82632BAD334E00FED650 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B62E82622BAD334E00FED650 /* Preview Assets.xcassets */; };
 		B62E826D2BAD334E00FED650 /* TheMovieDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E826C2BAD334E00FED650 /* TheMovieDBTests.swift */; };
@@ -33,6 +32,11 @@
 		B68F49AE2BAF5364002655DD /* APIBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68F49AD2BAF5364002655DD /* APIBundle.swift */; };
 		B68F49B22BAF542D002655DD /* APICore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68F49B12BAF542D002655DD /* APICore.framework */; };
 		B68F49B32BAF542D002655DD /* APICore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B68F49B12BAF542D002655DD /* APICore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B6DD1B3F2BAF8694002381FD /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = B6DD1B3E2BAF8694002381FD /* Nuke */; };
+		B6DD1B412BAF8694002381FD /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = B6DD1B402BAF8694002381FD /* NukeExtensions */; };
+		B6DD1B432BAF8694002381FD /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = B6DD1B422BAF8694002381FD /* NukeUI */; };
+		B6DD1B7D2BAF9FF9002381FD /* Features.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6DD1B7C2BAF9FF9002381FD /* Features.framework */; };
+		B6DD1B7E2BAF9FF9002381FD /* Features.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6DD1B7C2BAF9FF9002381FD /* Features.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,7 @@
 			files = (
 				B68F49B32BAF542D002655DD /* APICore.framework in Embed Frameworks */,
 				B62E83612BAD370700FED650 /* Analytics.framework in Embed Frameworks */,
+				B6DD1B7E2BAF9FF9002381FD /* Features.framework in Embed Frameworks */,
 				B62E835E2BAD370200FED650 /* CoreEntities.framework in Embed Frameworks */,
 				B62E82AA2BAD34E300FED650 /* NetworkCore.framework in Embed Frameworks */,
 				B62E83642BAD370D00FED650 /* CoreUseCases.framework in Embed Frameworks */,
@@ -79,7 +84,6 @@
 		9DB4C88D153DFDE919C6CC4E /* Pods-TheMovieDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheMovieDB.release.xcconfig"; path = "Target Support Files/Pods-TheMovieDB/Pods-TheMovieDB.release.xcconfig"; sourceTree = "<group>"; };
 		B62E82572BAD334C00FED650 /* TheMovieDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheMovieDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62E825A2BAD334C00FED650 /* TheMovieDBApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieDBApp.swift; sourceTree = "<group>"; };
-		B62E825C2BAD334C00FED650 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B62E825E2BAD334E00FED650 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B62E82602BAD334E00FED650 /* TheMovieDB.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TheMovieDB.entitlements; sourceTree = "<group>"; };
 		B62E82622BAD334E00FED650 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 		B68F49AB2BAF5339002655DD /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		B68F49AD2BAF5364002655DD /* APIBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBundle.swift; sourceTree = "<group>"; };
 		B68F49B12BAF542D002655DD /* APICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6DD1B7C2BAF9FF9002381FD /* Features.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Features.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,14 +111,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				B62E83602BAD370700FED650 /* Analytics.framework in Frameworks */,
+				B6DD1B7D2BAF9FF9002381FD /* Features.framework in Frameworks */,
 				B62E835D2BAD370200FED650 /* CoreEntities.framework in Frameworks */,
 				B62E82A92BAD34E300FED650 /* NetworkCore.framework in Frameworks */,
+				B6DD1B432BAF8694002381FD /* NukeUI in Frameworks */,
+				B6DD1B412BAF8694002381FD /* NukeExtensions in Frameworks */,
 				B62E83632BAD370D00FED650 /* CoreUseCases.framework in Frameworks */,
 				B62E835A2BAD36FC00FED650 /* CoreDataSource.framework in Frameworks */,
 				B62E83572BAD36F800FED650 /* Analytics.framework in Frameworks */,
 				B62E83662BAD371300FED650 /* UI.framework in Frameworks */,
 				B68F49B22BAF542D002655DD /* APICore.framework in Frameworks */,
 				40F04A03BBA9FEB1B96130A6 /* Pods_TheMovieDB.framework in Frameworks */,
+				B6DD1B3F2BAF8694002381FD /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,7 +170,6 @@
 			children = (
 				B68F49AA2BAF532F002655DD /* Config */,
 				B62E825A2BAD334C00FED650 /* TheMovieDBApp.swift */,
-				B62E825C2BAD334C00FED650 /* ContentView.swift */,
 				B62E825E2BAD334E00FED650 /* Assets.xcassets */,
 				B62E82602BAD334E00FED650 /* TheMovieDB.entitlements */,
 				B62E82612BAD334E00FED650 /* Preview Content */,
@@ -197,6 +205,7 @@
 		B62E82A72BAD34E300FED650 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B6DD1B7C2BAF9FF9002381FD /* Features.framework */,
 				B68F49B12BAF542D002655DD /* APICore.framework */,
 				B62E83652BAD371300FED650 /* UI.framework */,
 				B62E83622BAD370D00FED650 /* CoreUseCases.framework */,
@@ -248,6 +257,11 @@
 			dependencies = (
 			);
 			name = TheMovieDB;
+			packageProductDependencies = (
+				B6DD1B3E2BAF8694002381FD /* Nuke */,
+				B6DD1B402BAF8694002381FD /* NukeExtensions */,
+				B6DD1B422BAF8694002381FD /* NukeUI */,
+			);
 			productName = TheMovieDB;
 			productReference = B62E82572BAD334C00FED650 /* TheMovieDB.app */;
 			productType = "com.apple.product-type.application";
@@ -320,6 +334,9 @@
 				Base,
 			);
 			mainGroup = B62E824E2BAD334C00FED650;
+			packageReferences = (
+				B6DD1B3D2BAF8694002381FD /* XCRemoteSwiftPackageReference "Nuke" */,
+			);
 			productRefGroup = B62E82582BAD334C00FED650 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -404,7 +421,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B62E825D2BAD334C00FED650 /* ContentView.swift in Sources */,
 				B62E825B2BAD334C00FED650 /* TheMovieDBApp.swift in Sources */,
 				B68F49AE2BAF5364002655DD /* APIBundle.swift in Sources */,
 				B68F49AC2BAF5339002655DD /* APIConfig.swift in Sources */,
@@ -762,6 +778,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B6DD1B3D2BAF8694002381FD /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke?tab=readme-ov-file";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B6DD1B3E2BAF8694002381FD /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6DD1B3D2BAF8694002381FD /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		B6DD1B402BAF8694002381FD /* NukeExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6DD1B3D2BAF8694002381FD /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeExtensions;
+		};
+		B6DD1B422BAF8694002381FD /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6DD1B3D2BAF8694002381FD /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B62E824F2BAD334C00FED650 /* Project object */;
 }

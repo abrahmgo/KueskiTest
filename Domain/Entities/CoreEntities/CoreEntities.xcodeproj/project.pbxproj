@@ -14,6 +14,7 @@
 		B68F49912BAF3A1B002655DD /* TheMovieDBSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68F49902BAF3A1B002655DD /* TheMovieDBSort.swift */; };
 		B68F499E2BAF3DD6002655DD /* PopularMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68F499D2BAF3DD6002655DD /* PopularMovies.swift */; };
 		B68F49A92BAF4627002655DD /* PopularMoviesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68F49A82BAF4627002655DD /* PopularMoviesRequest.swift */; };
+		B6DD1B6A2BAF90FA002381FD /* TheMovieDBOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD1B692BAF90FA002381FD /* TheMovieDBOrder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		B68F49902BAF3A1B002655DD /* TheMovieDBSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieDBSort.swift; sourceTree = "<group>"; };
 		B68F499D2BAF3DD6002655DD /* PopularMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovies.swift; sourceTree = "<group>"; };
 		B68F49A82BAF4627002655DD /* PopularMoviesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesRequest.swift; sourceTree = "<group>"; };
+		B6DD1B692BAF90FA002381FD /* TheMovieDBOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieDBOrder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				B68F49902BAF3A1B002655DD /* TheMovieDBSort.swift */,
 				B68F499D2BAF3DD6002655DD /* PopularMovies.swift */,
 				B68F49A82BAF4627002655DD /* PopularMoviesRequest.swift */,
+				B6DD1B692BAF90FA002381FD /* TheMovieDBOrder.swift */,
 			);
 			path = CoreEntities;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6DD1B6A2BAF90FA002381FD /* TheMovieDBOrder.swift in Sources */,
 				B68F49A92BAF4627002655DD /* PopularMoviesRequest.swift in Sources */,
 				B68F49912BAF3A1B002655DD /* TheMovieDBSort.swift in Sources */,
 				B68F498F2BAF3A07002655DD /* TheMovieDBLanguage.swift in Sources */,

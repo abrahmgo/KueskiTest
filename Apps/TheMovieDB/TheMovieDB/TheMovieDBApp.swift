@@ -7,6 +7,7 @@
 
 import SwiftUI
 import NetworkCore
+import Features
 
 @main
 struct TheMovieDBApp: App {
@@ -17,7 +18,9 @@ struct TheMovieDBApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                ListGridFactory.build()
+            }
         }
     }
 }

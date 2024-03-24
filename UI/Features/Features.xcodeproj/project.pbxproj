@@ -7,199 +7,190 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B0A29F610A915F86B717BA9 /* Pods_UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1659116AB083B6385C30829 /* Pods_UI.framework */; };
-		B62E82E12BAD366000FED650 /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B62E82D82BAD366000FED650 /* UI.framework */; };
-		B62E82E62BAD366000FED650 /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E82E52BAD366000FED650 /* UITests.swift */; };
-		B62E82E72BAD366000FED650 /* UI.h in Headers */ = {isa = PBXBuildFile; fileRef = B62E82DB2BAD366000FED650 /* UI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B65536702BAF73EF00D4CD5A /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B655366F2BAF73EF00D4CD5A /* ImageView.swift */; };
-		B6DD1B382BAF8683002381FD /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = B6DD1B372BAF8683002381FD /* Nuke */; };
-		B6DD1B3A2BAF8683002381FD /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = B6DD1B392BAF8683002381FD /* NukeExtensions */; };
-		B6DD1B3C2BAF8683002381FD /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = B6DD1B3B2BAF8683002381FD /* NukeUI */; };
+		B6DD1B572BAF884F002381FD /* Features.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6DD1B4E2BAF884F002381FD /* Features.framework */; };
+		B6DD1B5C2BAF884F002381FD /* FeaturesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD1B5B2BAF884F002381FD /* FeaturesTests.swift */; };
+		B6DD1B5D2BAF884F002381FD /* Features.h in Headers */ = {isa = PBXBuildFile; fileRef = B6DD1B512BAF884F002381FD /* Features.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6DD1B682BAF8880002381FD /* ListGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD1B672BAF8880002381FD /* ListGridView.swift */; };
+		B6DD1B6D2BAF91EC002381FD /* CoreEntities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6DD1B6C2BAF91EC002381FD /* CoreEntities.framework */; };
+		B6DD1B712BAF9260002381FD /* ListGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD1B702BAF9260002381FD /* ListGridViewModel.swift */; };
+		B6DD1B732BAF9362002381FD /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6DD1B722BAF9362002381FD /* UI.framework */; };
+		B6DD1B772BAF93A5002381FD /* ListGrid+Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD1B762BAF93A5002381FD /* ListGrid+Dependencies.swift */; };
+		B6DD1B792BAF9529002381FD /* ListGridComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD1B782BAF9529002381FD /* ListGridComponents.swift */; };
+		B6DD1B7B2BAF9C23002381FD /* ListGridFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD1B7A2BAF9C23002381FD /* ListGridFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B62E82E22BAD366000FED650 /* PBXContainerItemProxy */ = {
+		B6DD1B582BAF884F002381FD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B62E82CF2BAD366000FED650 /* Project object */;
+			containerPortal = B6DD1B452BAF884F002381FD /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B62E82D72BAD366000FED650;
-			remoteInfo = UI;
+			remoteGlobalIDString = B6DD1B4D2BAF884F002381FD;
+			remoteInfo = Features;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B62E82D82BAD366000FED650 /* UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B62E82DB2BAD366000FED650 /* UI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UI.h; sourceTree = "<group>"; };
-		B62E82E02BAD366000FED650 /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B62E82E52BAD366000FED650 /* UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
-		B655366F2BAF73EF00D4CD5A /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
-		D720E574A662C06970C074A2 /* Pods-UI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UI.release.xcconfig"; path = "Target Support Files/Pods-UI/Pods-UI.release.xcconfig"; sourceTree = "<group>"; };
-		E459225E8096E6A3D981C01F /* Pods-UI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UI.debug.xcconfig"; path = "Target Support Files/Pods-UI/Pods-UI.debug.xcconfig"; sourceTree = "<group>"; };
-		F1659116AB083B6385C30829 /* Pods_UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6DD1B4E2BAF884F002381FD /* Features.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Features.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6DD1B512BAF884F002381FD /* Features.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Features.h; sourceTree = "<group>"; };
+		B6DD1B562BAF884F002381FD /* FeaturesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeaturesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6DD1B5B2BAF884F002381FD /* FeaturesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesTests.swift; sourceTree = "<group>"; };
+		B6DD1B672BAF8880002381FD /* ListGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGridView.swift; sourceTree = "<group>"; };
+		B6DD1B6C2BAF91EC002381FD /* CoreEntities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreEntities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6DD1B702BAF9260002381FD /* ListGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGridViewModel.swift; sourceTree = "<group>"; };
+		B6DD1B722BAF9362002381FD /* UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6DD1B762BAF93A5002381FD /* ListGrid+Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListGrid+Dependencies.swift"; sourceTree = "<group>"; };
+		B6DD1B782BAF9529002381FD /* ListGridComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGridComponents.swift; sourceTree = "<group>"; };
+		B6DD1B7A2BAF9C23002381FD /* ListGridFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGridFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B62E82D52BAD366000FED650 /* Frameworks */ = {
+		B6DD1B4B2BAF884F002381FD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B0A29F610A915F86B717BA9 /* Pods_UI.framework in Frameworks */,
-				B6DD1B382BAF8683002381FD /* Nuke in Frameworks */,
-				B6DD1B3A2BAF8683002381FD /* NukeExtensions in Frameworks */,
-				B6DD1B3C2BAF8683002381FD /* NukeUI in Frameworks */,
+				B6DD1B732BAF9362002381FD /* UI.framework in Frameworks */,
+				B6DD1B6D2BAF91EC002381FD /* CoreEntities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B62E82DD2BAD366000FED650 /* Frameworks */ = {
+		B6DD1B532BAF884F002381FD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B62E82E12BAD366000FED650 /* UI.framework in Frameworks */,
+				B6DD1B572BAF884F002381FD /* Features.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		73809684AC5A88B956974FA4 /* Pods */ = {
+		B6DD1B442BAF884F002381FD = {
 			isa = PBXGroup;
 			children = (
-				E459225E8096E6A3D981C01F /* Pods-UI.debug.xcconfig */,
-				D720E574A662C06970C074A2 /* Pods-UI.release.xcconfig */,
-			);
-			name = Pods;
-			path = ../../Pods;
-			sourceTree = "<group>";
-		};
-		9D091253C799EB06C20F996C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F1659116AB083B6385C30829 /* Pods_UI.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B62E82CE2BAD366000FED650 = {
-			isa = PBXGroup;
-			children = (
-				B62E82DA2BAD366000FED650 /* UI */,
-				B62E82E42BAD366000FED650 /* UITests */,
-				B62E82D92BAD366000FED650 /* Products */,
-				73809684AC5A88B956974FA4 /* Pods */,
-				9D091253C799EB06C20F996C /* Frameworks */,
+				B6DD1B502BAF884F002381FD /* Features */,
+				B6DD1B5A2BAF884F002381FD /* FeaturesTests */,
+				B6DD1B4F2BAF884F002381FD /* Products */,
+				B6DD1B6B2BAF91EC002381FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		B62E82D92BAD366000FED650 /* Products */ = {
+		B6DD1B4F2BAF884F002381FD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B62E82D82BAD366000FED650 /* UI.framework */,
-				B62E82E02BAD366000FED650 /* UITests.xctest */,
+				B6DD1B4E2BAF884F002381FD /* Features.framework */,
+				B6DD1B562BAF884F002381FD /* FeaturesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B62E82DA2BAD366000FED650 /* UI */ = {
+		B6DD1B502BAF884F002381FD /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				B655366E2BAF73CE00D4CD5A /* Views */,
-				B62E82DB2BAD366000FED650 /* UI.h */,
+				B6DD1B662BAF885A002381FD /* ListGrid */,
+				B6DD1B512BAF884F002381FD /* Features.h */,
 			);
-			path = UI;
+			path = Features;
 			sourceTree = "<group>";
 		};
-		B62E82E42BAD366000FED650 /* UITests */ = {
+		B6DD1B5A2BAF884F002381FD /* FeaturesTests */ = {
 			isa = PBXGroup;
 			children = (
-				B62E82E52BAD366000FED650 /* UITests.swift */,
+				B6DD1B5B2BAF884F002381FD /* FeaturesTests.swift */,
 			);
-			path = UITests;
+			path = FeaturesTests;
 			sourceTree = "<group>";
 		};
-		B655366E2BAF73CE00D4CD5A /* Views */ = {
+		B6DD1B662BAF885A002381FD /* ListGrid */ = {
 			isa = PBXGroup;
 			children = (
-				B655366F2BAF73EF00D4CD5A /* ImageView.swift */,
+				B6DD1B672BAF8880002381FD /* ListGridView.swift */,
+				B6DD1B702BAF9260002381FD /* ListGridViewModel.swift */,
+				B6DD1B762BAF93A5002381FD /* ListGrid+Dependencies.swift */,
+				B6DD1B782BAF9529002381FD /* ListGridComponents.swift */,
+				B6DD1B7A2BAF9C23002381FD /* ListGridFactory.swift */,
 			);
-			path = Views;
+			path = ListGrid;
+			sourceTree = "<group>";
+		};
+		B6DD1B6B2BAF91EC002381FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6DD1B722BAF9362002381FD /* UI.framework */,
+				B6DD1B6C2BAF91EC002381FD /* CoreEntities.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		B62E82D32BAD366000FED650 /* Headers */ = {
+		B6DD1B492BAF884F002381FD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B62E82E72BAD366000FED650 /* UI.h in Headers */,
+				B6DD1B5D2BAF884F002381FD /* Features.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		B62E82D72BAD366000FED650 /* UI */ = {
+		B6DD1B4D2BAF884F002381FD /* Features */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B62E82EA2BAD366000FED650 /* Build configuration list for PBXNativeTarget "UI" */;
+			buildConfigurationList = B6DD1B602BAF884F002381FD /* Build configuration list for PBXNativeTarget "Features" */;
 			buildPhases = (
-				5707D9A4F3D176B930C470C0 /* [CP] Check Pods Manifest.lock */,
-				B62E82D32BAD366000FED650 /* Headers */,
-				B62E82D42BAD366000FED650 /* Sources */,
-				B62E82D52BAD366000FED650 /* Frameworks */,
-				B62E82D62BAD366000FED650 /* Resources */,
+				B6DD1B492BAF884F002381FD /* Headers */,
+				B6DD1B4A2BAF884F002381FD /* Sources */,
+				B6DD1B4B2BAF884F002381FD /* Frameworks */,
+				B6DD1B4C2BAF884F002381FD /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = UI;
-			packageProductDependencies = (
-				B6DD1B372BAF8683002381FD /* Nuke */,
-				B6DD1B392BAF8683002381FD /* NukeExtensions */,
-				B6DD1B3B2BAF8683002381FD /* NukeUI */,
-			);
-			productName = UI;
-			productReference = B62E82D82BAD366000FED650 /* UI.framework */;
+			name = Features;
+			productName = Features;
+			productReference = B6DD1B4E2BAF884F002381FD /* Features.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B62E82DF2BAD366000FED650 /* UITests */ = {
+		B6DD1B552BAF884F002381FD /* FeaturesTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B62E82ED2BAD366000FED650 /* Build configuration list for PBXNativeTarget "UITests" */;
+			buildConfigurationList = B6DD1B632BAF884F002381FD /* Build configuration list for PBXNativeTarget "FeaturesTests" */;
 			buildPhases = (
-				B62E82DC2BAD366000FED650 /* Sources */,
-				B62E82DD2BAD366000FED650 /* Frameworks */,
-				B62E82DE2BAD366000FED650 /* Resources */,
+				B6DD1B522BAF884F002381FD /* Sources */,
+				B6DD1B532BAF884F002381FD /* Frameworks */,
+				B6DD1B542BAF884F002381FD /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B62E82E32BAD366000FED650 /* PBXTargetDependency */,
+				B6DD1B592BAF884F002381FD /* PBXTargetDependency */,
 			);
-			name = UITests;
-			productName = UITests;
-			productReference = B62E82E02BAD366000FED650 /* UITests.xctest */;
+			name = FeaturesTests;
+			productName = FeaturesTests;
+			productReference = B6DD1B562BAF884F002381FD /* FeaturesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B62E82CF2BAD366000FED650 /* Project object */ = {
+		B6DD1B452BAF884F002381FD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
-					B62E82D72BAD366000FED650 = {
+					B6DD1B4D2BAF884F002381FD = {
 						CreatedOnToolsVersion = 15.2;
 						LastSwiftMigration = 1520;
 					};
-					B62E82DF2BAD366000FED650 = {
+					B6DD1B552BAF884F002381FD = {
 						CreatedOnToolsVersion = 15.2;
 					};
 				};
 			};
-			buildConfigurationList = B62E82D22BAD366000FED650 /* Build configuration list for PBXProject "UI" */;
+			buildConfigurationList = B6DD1B482BAF884F002381FD /* Build configuration list for PBXProject "Features" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -207,29 +198,26 @@
 				en,
 				Base,
 			);
-			mainGroup = B62E82CE2BAD366000FED650;
-			packageReferences = (
-				B6DD1B362BAF8683002381FD /* XCRemoteSwiftPackageReference "Nuke" */,
-			);
-			productRefGroup = B62E82D92BAD366000FED650 /* Products */;
+			mainGroup = B6DD1B442BAF884F002381FD;
+			productRefGroup = B6DD1B4F2BAF884F002381FD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B62E82D72BAD366000FED650 /* UI */,
-				B62E82DF2BAD366000FED650 /* UITests */,
+				B6DD1B4D2BAF884F002381FD /* Features */,
+				B6DD1B552BAF884F002381FD /* FeaturesTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B62E82D62BAD366000FED650 /* Resources */ = {
+		B6DD1B4C2BAF884F002381FD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B62E82DE2BAD366000FED650 /* Resources */ = {
+		B6DD1B542BAF884F002381FD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -238,60 +226,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		5707D9A4F3D176B930C470C0 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-UI-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		B62E82D42BAD366000FED650 /* Sources */ = {
+		B6DD1B4A2BAF884F002381FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B65536702BAF73EF00D4CD5A /* ImageView.swift in Sources */,
+				B6DD1B7B2BAF9C23002381FD /* ListGridFactory.swift in Sources */,
+				B6DD1B712BAF9260002381FD /* ListGridViewModel.swift in Sources */,
+				B6DD1B772BAF93A5002381FD /* ListGrid+Dependencies.swift in Sources */,
+				B6DD1B682BAF8880002381FD /* ListGridView.swift in Sources */,
+				B6DD1B792BAF9529002381FD /* ListGridComponents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B62E82DC2BAD366000FED650 /* Sources */ = {
+		B6DD1B522BAF884F002381FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B62E82E62BAD366000FED650 /* UITests.swift in Sources */,
+				B6DD1B5C2BAF884F002381FD /* FeaturesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B62E82E32BAD366000FED650 /* PBXTargetDependency */ = {
+		B6DD1B592BAF884F002381FD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B62E82D72BAD366000FED650 /* UI */;
-			targetProxy = B62E82E22BAD366000FED650 /* PBXContainerItemProxy */;
+			target = B6DD1B4D2BAF884F002381FD /* Features */;
+			targetProxy = B6DD1B582BAF884F002381FD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		B62E82E82BAD366000FED650 /* Debug */ = {
+		B6DD1B5E2BAF884F002381FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -357,7 +324,7 @@
 			};
 			name = Debug;
 		};
-		B62E82E92BAD366000FED650 /* Release */ = {
+		B6DD1B5F2BAF884F002381FD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -416,9 +383,8 @@
 			};
 			name = Release;
 		};
-		B62E82EB2BAD366000FED650 /* Debug */ = {
+		B6DD1B612BAF884F002381FD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E459225E8096E6A3D981C01F /* Pods-UI.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -439,7 +405,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = andres.com.UI;
+				PRODUCT_BUNDLE_IDENTIFIER = andres.com.Features;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -449,9 +415,8 @@
 			};
 			name = Debug;
 		};
-		B62E82EC2BAD366000FED650 /* Release */ = {
+		B6DD1B622BAF884F002381FD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D720E574A662C06970C074A2 /* Pods-UI.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -472,7 +437,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = andres.com.UI;
+				PRODUCT_BUNDLE_IDENTIFIER = andres.com.Features;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -481,7 +446,7 @@
 			};
 			name = Release;
 		};
-		B62E82EE2BAD366000FED650 /* Debug */ = {
+		B6DD1B642BAF884F002381FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -489,7 +454,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = andres.com.UITests;
+				PRODUCT_BUNDLE_IDENTIFIER = andres.com.FeaturesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -497,7 +462,7 @@
 			};
 			name = Debug;
 		};
-		B62E82EF2BAD366000FED650 /* Release */ = {
+		B6DD1B652BAF884F002381FD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -505,7 +470,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = andres.com.UITests;
+				PRODUCT_BUNDLE_IDENTIFIER = andres.com.FeaturesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -516,63 +481,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B62E82D22BAD366000FED650 /* Build configuration list for PBXProject "UI" */ = {
+		B6DD1B482BAF884F002381FD /* Build configuration list for PBXProject "Features" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B62E82E82BAD366000FED650 /* Debug */,
-				B62E82E92BAD366000FED650 /* Release */,
+				B6DD1B5E2BAF884F002381FD /* Debug */,
+				B6DD1B5F2BAF884F002381FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B62E82EA2BAD366000FED650 /* Build configuration list for PBXNativeTarget "UI" */ = {
+		B6DD1B602BAF884F002381FD /* Build configuration list for PBXNativeTarget "Features" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B62E82EB2BAD366000FED650 /* Debug */,
-				B62E82EC2BAD366000FED650 /* Release */,
+				B6DD1B612BAF884F002381FD /* Debug */,
+				B6DD1B622BAF884F002381FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B62E82ED2BAD366000FED650 /* Build configuration list for PBXNativeTarget "UITests" */ = {
+		B6DD1B632BAF884F002381FD /* Build configuration list for PBXNativeTarget "FeaturesTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B62E82EE2BAD366000FED650 /* Debug */,
-				B62E82EF2BAD366000FED650 /* Release */,
+				B6DD1B642BAF884F002381FD /* Debug */,
+				B6DD1B652BAF884F002381FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		B6DD1B362BAF8683002381FD /* XCRemoteSwiftPackageReference "Nuke" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kean/Nuke?tab=readme-ov-file";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 12.5.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		B6DD1B372BAF8683002381FD /* Nuke */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B6DD1B362BAF8683002381FD /* XCRemoteSwiftPackageReference "Nuke" */;
-			productName = Nuke;
-		};
-		B6DD1B392BAF8683002381FD /* NukeExtensions */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B6DD1B362BAF8683002381FD /* XCRemoteSwiftPackageReference "Nuke" */;
-			productName = NukeExtensions;
-		};
-		B6DD1B3B2BAF8683002381FD /* NukeUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B6DD1B362BAF8683002381FD /* XCRemoteSwiftPackageReference "Nuke" */;
-			productName = NukeUI;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = B62E82CF2BAD366000FED650 /* Project object */;
+	rootObject = B6DD1B452BAF884F002381FD /* Project object */;
 }
