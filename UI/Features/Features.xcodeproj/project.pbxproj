@@ -10,6 +10,7 @@
 		B69E006D2BB0DDB40035179E /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = B69E006C2BB0DDB40035179E /* Nuke */; };
 		B69E006F2BB0DDB40035179E /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = B69E006E2BB0DDB40035179E /* NukeExtensions */; };
 		B69E00712BB0DDB40035179E /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = B69E00702BB0DDB40035179E /* NukeUI */; };
+		B69E008E2BB1D84D0035179E /* ListGridRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E008D2BB1D84D0035179E /* ListGridRouter.swift */; };
 		B6DD1B572BAF884F002381FD /* Features.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6DD1B4E2BAF884F002381FD /* Features.framework */; };
 		B6DD1B5C2BAF884F002381FD /* FeaturesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD1B5B2BAF884F002381FD /* FeaturesTests.swift */; };
 		B6DD1B5D2BAF884F002381FD /* Features.h in Headers */ = {isa = PBXBuildFile; fileRef = B6DD1B512BAF884F002381FD /* Features.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B69E008D2BB1D84D0035179E /* ListGridRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListGridRouter.swift; sourceTree = "<group>"; };
 		B6DD1B4E2BAF884F002381FD /* Features.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Features.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6DD1B512BAF884F002381FD /* Features.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Features.h; sourceTree = "<group>"; };
 		B6DD1B562BAF884F002381FD /* FeaturesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeaturesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				B6DD1B672BAF8880002381FD /* ListGridView.swift */,
+				B69E008D2BB1D84D0035179E /* ListGridRouter.swift */,
 				B6DD1B702BAF9260002381FD /* ListGridViewModel.swift */,
 				B6DD1B762BAF93A5002381FD /* ListGrid+Dependencies.swift */,
 				B6DD1B782BAF9529002381FD /* ListGridComponents.swift */,
@@ -245,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B69E008E2BB1D84D0035179E /* ListGridRouter.swift in Sources */,
 				B6DD1B7B2BAF9C23002381FD /* ListGridFactory.swift in Sources */,
 				B6DD1B712BAF9260002381FD /* ListGridViewModel.swift in Sources */,
 				B6DD1B772BAF93A5002381FD /* ListGrid+Dependencies.swift in Sources */,

@@ -1,13 +1,14 @@
 //
-//  TheMovieDBTests.swift
-//  TheMovieDBTests
+//  TheMoviewDBTests.swift
+//  TheMoviewDBTests
 //
-//  Created by Andrés Bonilla Gómez on 21/03/24.
+//  Created by Andrés Bonilla Gómez on 25/03/24.
 //
 
 import XCTest
+@testable import TheMoviewDB
 
-final class TheMovieDBTests: XCTestCase {
+final class TheMoviewDBTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -27,7 +28,7 @@ final class TheMovieDBTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        measure {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }

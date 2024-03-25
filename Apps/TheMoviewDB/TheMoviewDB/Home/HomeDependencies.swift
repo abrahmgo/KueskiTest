@@ -9,14 +9,18 @@ import Features
 import CoreUseCases
 import CoreEntities
 import UI
+import SwiftUI
 
 class HomeDependencies: ListGridViewSetComponentsType, ListGridViewDelegate {
     
     private let getPopularMoviesUseCase: GetPopularMoviesUseCaseType
     private var popularMovies: [PopularMovie] = []
+    private let router: HomeRouterType
     
-    init(getPopularMoviesUseCase: GetPopularMoviesUseCaseType) {
+    init(getPopularMoviesUseCase: GetPopularMoviesUseCaseType,
+         router: HomeRouterType) {
         self.getPopularMoviesUseCase = getPopularMoviesUseCase
+        self.router = router
     }
     
     func execute() async throws -> [Features.ListGridComponents] {
@@ -32,6 +36,6 @@ class HomeDependencies: ListGridViewSetComponentsType, ListGridViewDelegate {
     }
     
     func itemSelected(index: Int) {
-        print(popularMovies[index])
+        router.goToNextView()
     }
 }

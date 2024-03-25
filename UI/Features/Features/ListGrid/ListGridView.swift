@@ -12,6 +12,7 @@ import UI
 struct ListGridView: View {
         
     @ObservedObject private var viewModel: ListGridViewModel
+    @EnvironmentObject var router: Router<ListGridPath>
     weak var delegate: ListGridViewDelegate?
     
     init(viewModel: ListGridViewModel,

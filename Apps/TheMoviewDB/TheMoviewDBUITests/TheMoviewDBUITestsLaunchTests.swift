@@ -1,13 +1,13 @@
 //
-//  TheMovieDBUITestsLaunchTests.swift
-//  TheMovieDBUITests
+//  TheMoviewDBUITestsLaunchTests.swift
+//  TheMoviewDBUITests
 //
-//  Created by Andrés Bonilla Gómez on 21/03/24.
+//  Created by Andrés Bonilla Gómez on 25/03/24.
 //
 
 import XCTest
 
-final class TheMovieDBUITestsLaunchTests: XCTestCase {
+final class TheMoviewDBUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

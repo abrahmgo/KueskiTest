@@ -1,13 +1,13 @@
 //
-//  TheMovieDBUITests.swift
-//  TheMovieDBUITests
+//  TheMoviewDBUITests.swift
+//  TheMoviewDBUITests
 //
-//  Created by Andrés Bonilla Gómez on 21/03/24.
+//  Created by Andrés Bonilla Gómez on 25/03/24.
 //
 
 import XCTest
 
-final class TheMovieDBUITests: XCTestCase {
+final class TheMoviewDBUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

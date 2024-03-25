@@ -7,8 +7,8 @@ def networking
   pod 'Alamofire'
 end
 
-target 'TheMovieDB' do
-  project 'Apps/TheMovieDB/TheMovieDB'
+target 'TheMoviewDB' do
+  project 'Apps/TheMoviewDB/TheMoviewDB'
   
   networking
   
