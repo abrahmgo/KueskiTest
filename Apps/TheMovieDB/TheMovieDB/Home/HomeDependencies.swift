@@ -10,9 +10,10 @@ import CoreUseCases
 import CoreEntities
 import UI
 
-struct HomeDependenciesComponents: ListGridViewSetComponentsType {
+class HomeDependencies: ListGridViewSetComponentsType, ListGridViewDelegate {
     
     private let getPopularMoviesUseCase: GetPopularMoviesUseCaseType
+    private var popularMovies: [PopularMovie] = []
     
     init(getPopularMoviesUseCase: GetPopularMoviesUseCaseType) {
         self.getPopularMoviesUseCase = getPopularMoviesUseCase
@@ -26,15 +27,11 @@ struct HomeDependenciesComponents: ListGridViewSetComponentsType {
         let data = try await getPopularMoviesUseCase.execute(model: model)
         let viewData = data.results.map({ImageViewData(url: URL(string: $0.poster))})
         let components = viewData.map({ListGridComponents.image(viewData: $0)})
+        popularMovies = data.results
         return components
     }
-}
-
-struct HomeDependencies {
     
-    static func make() -> ListGridDependencies {
-        let usecase = GetPopularMoviesWPaginationUseCase()
-        let components = HomeDependenciesComponents(getPopularMoviesUseCase: usecase)
-        return ListGridDependencies(columns: 3, components: components)
+    func itemSelected(index: Int) {
+        print(popularMovies[index])
     }
 }

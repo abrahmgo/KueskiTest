@@ -12,6 +12,6 @@ public struct ListGridFactory {
     @ViewBuilder
     public static func build(dependencies: ListGridDependencies) -> some View {
         let viewModel = ListGridViewModel(dependencies: dependencies)
-        ListGridView(viewModel: viewModel)
+        ListGridView(viewModel: viewModel, delegate: dependencies.delegate)
     }
 }

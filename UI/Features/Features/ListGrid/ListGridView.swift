@@ -12,9 +12,12 @@ import UI
 struct ListGridView: View {
         
     @ObservedObject private var viewModel: ListGridViewModel
+    weak var delegate: ListGridViewDelegate?
     
-    init(viewModel: ListGridViewModel) {
+    init(viewModel: ListGridViewModel,
+         delegate: ListGridViewDelegate? = nil) {
         self.viewModel = viewModel
+        self.delegate = delegate
     }
     
     var body: some View {
@@ -25,13 +28,16 @@ struct ListGridView: View {
                 LazyVGrid(columns: colums, alignment: .center) {
                     ForEach(0..<viewModel.components.count, id: \.self) { item in
                         self.paintComponent(component: viewModel.components[item])
+                            .onTapGesture {
+                                self.delegate?.itemSelected(index: item)
+                            }
                     }
                     .listRowInsets(EdgeInsets())
                 }
                 .padding(.horizontal)
             }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
-            .navigationBarTitle(Text("Productos"))
+            .navigationBarTitle(Text("TheMoviewDB"))
         }
     }
     
@@ -41,6 +47,10 @@ struct ListGridView: View {
             return ImageView(model: viewData)
         }
     }
+}
+
+public protocol ListGridViewDelegate: AnyObject {
+    func itemSelected(index: Int)
 }
 
 struct ContentView_Previews: PreviewProvider {

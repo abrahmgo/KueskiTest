@@ -32,9 +32,13 @@ public struct ListGridDependencies {
     
     public let columns: Int
     public let components: ListGridViewSetComponentsType
+    public let delegate: ListGridViewDelegate?
     
-    public init(columns: Int, components: ListGridViewSetComponentsType) {
+    public init(columns: Int, 
+                components: ListGridViewSetComponentsType,
+                delegate: ListGridViewDelegate? = nil) {
         self.columns = columns
         self.components = components
+        self.delegate = delegate
     }
 }

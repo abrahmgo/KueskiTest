@@ -12,7 +12,7 @@ struct HomeFactory {
     
     @ViewBuilder
     static func build() -> some View {
-        let dependencies = HomeDependencies.make()
+        let dependencies = HomeDependenciesFactory.make()
         ListGridFactory.build(dependencies: dependencies)
     }
 }
