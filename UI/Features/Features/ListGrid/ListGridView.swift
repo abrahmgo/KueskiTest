@@ -26,10 +26,17 @@ struct ListGridView: View {
                 let side = geometry.size.width / 4
                 let colums = viewModel.getColumns(order: viewModel.order, side: side)
                 LazyVGrid(columns: colums, alignment: .center) {
-                    ForEach(0..<viewModel.components.count, id: \.self) { item in
+                    let elements = viewModel.components.count
+                    ForEach(0..<elements, id: \.self) { item in
                         self.paint(component: viewModel.components[item])
                             .onTapGesture {
                                 self.delegate?.itemSelected(index: item)
+                            }
+                            .onAppear {
+                                let isLast = (item + 1) == elements
+                                if isLast {
+                                    viewModel.inputs.requestMoreData()
+                                }
                             }
                     }
                     .listRowInsets(EdgeInsets())

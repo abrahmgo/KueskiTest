@@ -13,11 +13,11 @@ import SwiftUI
 
 class HomeDependencies: ListGridViewSetComponentsType, ListGridViewDelegate {
     
-    private let getPopularMoviesUseCase: GetPopularMoviesUseCaseType
+    private let getPopularMoviesUseCase: GetPopularMoviesWPaginationUseCaseType
     private var popularMovies: [PopularMovie] = []
     private let router: HomeRouterType
     
-    init(getPopularMoviesUseCase: GetPopularMoviesUseCaseType,
+    init(getPopularMoviesUseCase: GetPopularMoviesWPaginationUseCaseType,
          router: HomeRouterType) {
         self.getPopularMoviesUseCase = getPopularMoviesUseCase
         self.router = router
@@ -29,9 +29,9 @@ class HomeDependencies: ListGridViewSetComponentsType, ListGridViewDelegate {
                                          language: .us,
                                          sort: .popularityDesc)
         let data = try await getPopularMoviesUseCase.execute(model: model)
-        let viewData = data.results.map({ImageViewData(url: $0.poster)})
+        let viewData = data.map({ImageViewData(url: $0.poster)})
         let components = viewData.map({ListGridComponents.image(viewData: $0)})
-        popularMovies = data.results
+        popularMovies = data
         return components
     }
     

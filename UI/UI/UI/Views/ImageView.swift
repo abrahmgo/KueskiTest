@@ -22,17 +22,22 @@ public struct ImageView: View {
     
     public var body: some View {
         VStack(spacing: 16) {
-            LazyImage(url: model.url) { state in
-                if let image = state.image {
-                    image
-                        .resizable()
-                        .frame(width: 100, height: 150)
-                        .aspectRatio(contentMode: .fill)
-                } else {
-                    Color.gray.opacity(0.2)
-                }
-            }.pipeline(pipeline)
-        }
+            getDownloadImage()
+        }.frame(width: 100, height: 150)
+    }
+    
+    @ViewBuilder
+    private func getDownloadImage() -> some View {
+        LazyImage(url: model.url) { state in
+            if let image = state.image {
+                image
+                    .resizable()
+                    .frame(width: 100, height: 150)
+                    .aspectRatio(contentMode: .fill)
+            } else {
+                Color.gray.opacity(0.2)
+            }
+        }.pipeline(pipeline)
     }
     
     private let pipeline = ImagePipeline {

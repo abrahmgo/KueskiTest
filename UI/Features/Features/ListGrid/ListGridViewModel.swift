@@ -58,4 +58,8 @@ class ListGridViewModel: ListGridViewModelInputs, ListGridViewModelType, ListGri
             return data
         }
     }
+    
+    func requestMoreData() {
+        setComponents()
+    }
 }

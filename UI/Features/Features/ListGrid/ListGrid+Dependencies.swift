@@ -17,6 +17,7 @@ protocol ListGridViewModelOutputs {
 
 protocol ListGridViewModelInputs {
     func order(order: ContentOrder)
+    func requestMoreData()
 }
 
 protocol ListGridViewModelType {

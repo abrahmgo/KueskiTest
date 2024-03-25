@@ -26,18 +26,23 @@ public struct GetPopularMoviesUseCase: GetPopularMoviesUseCaseType {
     }
 }
 
+public protocol GetPopularMoviesWPaginationUseCaseType {
+    func execute(model: PopularMoviesRequest) async throws -> [PopularMovie]
+}
+
 /// Usecase to get popular movies with ascendent pagination, this usecase ignores the page paramter in the model that you pass it
-public class GetPopularMoviesWPaginationUseCase: GetPopularMoviesUseCaseType {
+public class GetPopularMoviesWPaginationUseCase: GetPopularMoviesWPaginationUseCaseType {
     
     private let getPopularMoviesUseCase: GetPopularMoviesUseCaseType
     private var page: Int = 0
     private var totalPages: Int = 0
+    private var movies: [PopularMovie] = []
     
     public init(getPopularMoviesUseCase: GetPopularMoviesUseCaseType = GetPopularMoviesUseCase()) {
         self.getPopularMoviesUseCase = getPopularMoviesUseCase
     }
     
-    public func execute(model: PopularMoviesRequest) async throws -> PopularMovies {
+    public func execute(model: PopularMoviesRequest) async throws -> [PopularMovie] {
         checkPagination()
         let model = PopularMoviesRequest(includeAdult: model.includeAdult,
                                          includeVideo: model.includeVideo,
@@ -46,7 +51,8 @@ public class GetPopularMoviesWPaginationUseCase: GetPopularMoviesUseCaseType {
                                          sort: model.sort)
         let result = try await getPopularMoviesUseCase.execute(model: model)
         totalPages = result.totalPages
-        return result
+        movies += result.results
+        return movies
     }
     
     private func checkPagination() {
