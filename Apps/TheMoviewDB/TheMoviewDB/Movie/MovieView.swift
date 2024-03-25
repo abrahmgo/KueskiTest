@@ -11,6 +11,7 @@ import UI
 struct MovieView: View {
     
     @ObservedObject private var viewModel: MovieViewModel
+    @State private var favorite: Bool = false
     
     init(viewModel: MovieViewModel) {
         self.viewModel = viewModel
@@ -24,6 +25,13 @@ struct MovieView: View {
             .listRowInsets(EdgeInsets())
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+        .toolbar {
+            Image(systemName: favorite ? "star.fill" : "star")
+                .onTapGesture {
+                    favorite.toggle()
+                    viewModel.setFavorite(status: favorite)
+                }
+        }
     }
     
     @ViewBuilder

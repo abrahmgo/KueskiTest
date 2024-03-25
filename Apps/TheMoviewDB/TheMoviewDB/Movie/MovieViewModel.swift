@@ -25,6 +25,10 @@ class MovieViewModel: MovieViewModelInputs, MovieViewModelType, MovieViewModelOu
         setComponents()
     }
     
+    func setFavorite(status: Bool) {
+        print(status)
+    }
+    
     private func setComponents() {
         
         let titleViewData = TextViewData(text: dependencies.movie.title, font: .largeTitle)

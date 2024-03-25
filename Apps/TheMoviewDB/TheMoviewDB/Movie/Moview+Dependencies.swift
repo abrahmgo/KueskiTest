@@ -11,7 +11,10 @@ protocol MovieViewModelOutputs {
     var components: [MovieComponents] { get }
 }
 
-protocol MovieViewModelInputs { }
+protocol MovieViewModelInputs { 
+    
+    func setFavorite(status: Bool)
+}
 
 protocol MovieViewModelType {
     var outputs: MovieViewModelOutputs { get }
