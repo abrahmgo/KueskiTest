@@ -47,24 +47,19 @@ public struct ImageView: View {
 struct ImageViewl_Previews: PreviewProvider {
     
     static var previews: some View {
-        ImageView(model: ExampleProductViewData())
+        ImageView(model: ExampleImageViewData())
     }
 }
 
 public protocol ImageViewDataType {
     
-    var title: String { get }
     var url: URL? { get }
-    var price: String { get }
 }
 
-public struct ExampleProductViewData: ImageViewDataType, Identifiable {
+public struct ExampleImageViewData: ImageViewDataType, Identifiable {
     
     public init() { }
     
     public var id = UUID()
-    
-    public let title: String = "Xbox"
     public let url: URL? = URL(string: "https://image.tmdb.org/t/p/w1280/6Dc9mMl083cVpNknWzALCw7JYPH.jpg")
-    public let price: String = "$30.00"
 }

@@ -33,7 +33,9 @@ class ListGridViewModel: ListGridViewModelInputs, ListGridViewModelType, ListGri
     func setComponents() {
         Task {
             do {
+                print("loading")
                 let components = try await dependencies.components.execute()
+                print("finish")
                 await MainActor.run {
                     self.components = components
                 }

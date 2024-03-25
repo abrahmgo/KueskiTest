@@ -32,6 +32,8 @@
 		B68F49AE2BAF5364002655DD /* APIBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68F49AD2BAF5364002655DD /* APIBundle.swift */; };
 		B68F49B22BAF542D002655DD /* APICore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68F49B12BAF542D002655DD /* APICore.framework */; };
 		B68F49B32BAF542D002655DD /* APICore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B68F49B12BAF542D002655DD /* APICore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B69E00742BB1138A0035179E /* HomeDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E00732BB1138A0035179E /* HomeDependencies.swift */; };
+		B69E00782BB115CC0035179E /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E00772BB115CC0035179E /* HomeFactory.swift */; };
 		B6DD1B3F2BAF8694002381FD /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = B6DD1B3E2BAF8694002381FD /* Nuke */; };
 		B6DD1B412BAF8694002381FD /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = B6DD1B402BAF8694002381FD /* NukeExtensions */; };
 		B6DD1B432BAF8694002381FD /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = B6DD1B422BAF8694002381FD /* NukeUI */; };
@@ -102,6 +104,8 @@
 		B68F49AB2BAF5339002655DD /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		B68F49AD2BAF5364002655DD /* APIBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBundle.swift; sourceTree = "<group>"; };
 		B68F49B12BAF542D002655DD /* APICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B69E00732BB1138A0035179E /* HomeDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDependencies.swift; sourceTree = "<group>"; };
+		B69E00772BB115CC0035179E /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
 		B6DD1B7C2BAF9FF9002381FD /* Features.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Features.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -232,6 +236,8 @@
 		B69E00722BB1134F0035179E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B69E00732BB1138A0035179E /* HomeDependencies.swift */,
+				B69E00772BB115CC0035179E /* HomeFactory.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -430,6 +436,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B62E825B2BAD334C00FED650 /* TheMovieDBApp.swift in Sources */,
+				B69E00782BB115CC0035179E /* HomeFactory.swift in Sources */,
+				B69E00742BB1138A0035179E /* HomeDependencies.swift in Sources */,
 				B68F49AE2BAF5364002655DD /* APIBundle.swift in Sources */,
 				B68F49AC2BAF5339002655DD /* APIConfig.swift in Sources */,
 			);

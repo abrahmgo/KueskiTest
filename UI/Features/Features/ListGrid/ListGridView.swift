@@ -45,16 +45,16 @@ struct ListGridView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ListGridFactory.build(dependencies: ListGridDependenciesExample.dependenices)
+        ListGridFactory.build(dependencies: ExampleListGridDependencies.dependenices)
     }
 }
 
-struct ListGridDependenciesExample {
-    static let dependenices = ListGridDependencies(columns: 3, components: ListGridDependenciesComponentsExample())
+struct ExampleListGridDependencies {
+    static let dependenices = ListGridDependencies(columns: 3, components: ExampleListGridDependenciesComponents())
 }
 
-struct ListGridDependenciesComponentsExample: ListGridViewSetComponentsType {
+struct ExampleListGridDependenciesComponents: ListGridViewSetComponentsType {
     func execute() async throws -> [ListGridComponents] {
-        return [.image(viewData: ExampleProductViewData())]
+        return [.image(viewData: ExampleImageViewData())]
     }
 }

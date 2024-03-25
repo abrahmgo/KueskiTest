@@ -19,7 +19,7 @@ struct TheMovieDBApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                ListGridFactory.build()
+                HomeFactory.build()
             }
         }
     }
