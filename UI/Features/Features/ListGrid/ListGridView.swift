@@ -45,6 +45,25 @@ struct ListGridView: View {
             }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
             .navigationBarTitle(Text("TheMoviewDB"))
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Menu {
+                        Button {
+                            viewModel.order(order: .list)
+                        } label: {
+                            Label("List", systemImage: "list.bullet")
+                        }
+                        Button {
+                            viewModel.order(order: .grid)
+                        } label: {
+                            Label("Grid", systemImage: "square.grid.3x3")
+                        }
+                    } label: {
+                        Label("View", systemImage: "viewfinder")
+                            .labelStyle(.titleOnly)
+                    }
+                }
+            }
         }
     }
     
