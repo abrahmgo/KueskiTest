@@ -28,14 +28,14 @@ public struct PopularMovie {
     public let originalTitle: String
     public let overview: String
     public let popularity: Double
-    public let poster: String
+    public let poster: URL?
     public let releaseDate: Date
     public let title: String
     public let voteAverage: Double
     public let voteCount: Int
     
     public init(originalLanguage: String, originalTitle: String, 
-                overview: String, popularity: Double, poster: String,
+                overview: String, popularity: Double, poster: URL?,
                 releaseDate: Date, title: String,
                 voteAverage: Double, voteCount: Int) {
         self.originalLanguage = originalLanguage

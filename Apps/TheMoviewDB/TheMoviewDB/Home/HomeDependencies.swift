@@ -29,7 +29,7 @@ class HomeDependencies: ListGridViewSetComponentsType, ListGridViewDelegate {
                                          language: .us,
                                          sort: .popularityDesc)
         let data = try await getPopularMoviesUseCase.execute(model: model)
-        let viewData = data.results.map({ImageViewData(url: URL(string: $0.poster))})
+        let viewData = data.results.map({ImageViewData(url: $0.poster)})
         let components = viewData.map({ListGridComponents.image(viewData: $0)})
         popularMovies = data.results
         return components

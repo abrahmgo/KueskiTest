@@ -26,9 +26,36 @@ class MovieViewModel: MovieViewModelInputs, MovieViewModelType, MovieViewModelOu
     }
     
     private func setComponents() {
-        let titleViewData = TextViewData(text: dependencies.movie.title)
+        
+        let titleViewData = TextViewData(text: dependencies.movie.title, font: .largeTitle)
         let titleComponent = MovieComponents.text(viewData: titleViewData)
         
-        components = [titleComponent]
+        let posterViewData = ImageViewData(url: dependencies.movie.poster)
+        let posterComponent = MovieComponents.image(viewData: posterViewData)
+        
+        let genresViewData = TextViewData(text: dependencies.movie.title)
+        let genresComponent = MovieComponents.text(viewData: genresViewData)
+        
+        let overviewViewData = TextViewData(text: dependencies.movie.overview)
+        let overviewComponent = MovieComponents.text(viewData: overviewViewData)
+        
+        let popularityViewData = TextViewData(text: dependencies.movie.popularity.description)
+        let popularityComponent = MovieComponents.text(viewData: popularityViewData)
+        
+        let releaseViewData = TextViewData(text: dependencies.movie.releaseDate.description)
+        let releaseComponent = MovieComponents.text(viewData: releaseViewData)
+        
+        let languagesViewData = TextViewData(text: dependencies.movie.originalLanguage)
+        let languagesComponent = MovieComponents.text(viewData: languagesViewData)
+        
+        let rateViewData = TextViewData(text: dependencies.movie.voteAverage.description)
+        let rateComponent = MovieComponents.text(viewData: rateViewData)
+        
+        let statusViewData = TextViewData(text: dependencies.movie.title)
+        let statusComponent = MovieComponents.text(viewData: statusViewData)
+        
+        components = [titleComponent, posterComponent, genresComponent, overviewComponent,
+                      popularityComponent, releaseComponent, languagesComponent, rateComponent,
+                      statusComponent]
     }
 }
