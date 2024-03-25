@@ -6,16 +6,18 @@
 //
 
 import UIKit
+import SwiftUI
+import CoreEntities
 
 class HomeRouter: HomeRouterType {
     weak var view: UIViewController?
     
-    func goToNextView() {
-        let viewController = UIViewController()
+    func goTo(movie: PopularMovie) {
+        let viewController = MovieFactory.build(movie: movie)
         view?.navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
 protocol HomeRouterType {
-    func goToNextView()
+    func goTo(movie: PopularMovie)
 }

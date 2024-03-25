@@ -12,7 +12,6 @@ import UI
 struct ListGridView: View {
         
     @ObservedObject private var viewModel: ListGridViewModel
-    @EnvironmentObject var router: Router<ListGridPath>
     weak var delegate: ListGridViewDelegate?
     
     init(viewModel: ListGridViewModel,
@@ -28,7 +27,7 @@ struct ListGridView: View {
                 let colums = viewModel.getColumns(order: viewModel.order, side: side)
                 LazyVGrid(columns: colums, alignment: .center) {
                     ForEach(0..<viewModel.components.count, id: \.self) { item in
-                        self.paintComponent(component: viewModel.components[item])
+                        self.paint(component: viewModel.components[item])
                             .onTapGesture {
                                 self.delegate?.itemSelected(index: item)
                             }
@@ -42,7 +41,7 @@ struct ListGridView: View {
         }
     }
     
-    private func paintComponent(component: ListGridComponents) -> some View {
+    private func paint(component: ListGridComponents) -> some View {
         switch component {
         case .image(let viewData):
             return ImageView(model: viewData)

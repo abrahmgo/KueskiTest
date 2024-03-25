@@ -1,0 +1,23 @@
+//
+//  MovieFactory.swift
+//  TheMoviewDB
+//
+//  Created by Andrés Bonilla Gómez on 25/03/24.
+//
+
+import SwiftUI
+import Features
+import UIKit
+import CoreEntities
+
+struct MovieFactory {
+    static func build(movie: PopularMovie) -> UIViewController {
+        
+        let dependencies = MovieDependencies(movie: movie)
+        let viewModel = MovieViewModel(dependencies: dependencies)
+        let view = MovieView(viewModel: viewModel)
+        let viewController = UIHostingController(rootView: view)
+        return viewController
+    }
+}
+

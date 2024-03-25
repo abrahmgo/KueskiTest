@@ -36,6 +36,7 @@ class HomeDependencies: ListGridViewSetComponentsType, ListGridViewDelegate {
     }
     
     func itemSelected(index: Int) {
-        router.goToNextView()
+        let movie = popularMovies[index]
+        router.goTo(movie: movie)
     }
 }
