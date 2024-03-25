@@ -8,22 +8,33 @@
 import CoreEntities
 import SwiftUI
 
-public protocol ListGridViewModelOutputs {
+protocol ListGridViewModelOutputs {
     var order: ContentOrder { get }
     var components: [ListGridComponents] { get }
     
-    func getColumns(order: ContentOrder) -> [GridItem]
+    func getColumns(order: ContentOrder, side: CGFloat) -> [GridItem]
 }
 
-public protocol ListGridViewModelInputs {
+protocol ListGridViewModelInputs {
     func order(order: ContentOrder)
 }
 
-public protocol ListGridViewModelType {
+protocol ListGridViewModelType {
     var outputs: ListGridViewModelOutputs { get }
     var inputs: ListGridViewModelInputs { get }
 }
 
+public protocol ListGridViewSetComponentsType {
+    func execute() async throws -> [ListGridComponents]
+}
+
 public struct ListGridDependencies {
-    var columns: Int
+    
+    public let columns: Int
+    public let components: ListGridViewSetComponentsType
+    
+    public init(columns: Int, components: ListGridViewSetComponentsType) {
+        self.columns = columns
+        self.components = components
+    }
 }

@@ -18,18 +18,21 @@ struct ListGridView: View {
     }
     
     var body: some View {
-        ScrollView([.vertical], showsIndicators: true) {
-            let colums = viewModel.getColumns(order: viewModel.order)
-            LazyVGrid(columns: colums, spacing: 10) {
-                ForEach(viewModel.components) { item in
-                    self.paintComponent(component: item)
+        GeometryReader { geometry in
+            ScrollView([.vertical], showsIndicators: true) {
+                let side = geometry.size.width / 4
+                let colums = viewModel.getColumns(order: viewModel.order, side: side)
+                LazyVGrid(columns: colums, alignment: .center) {
+                    ForEach(0..<viewModel.components.count, id: \.self) { item in
+                        self.paintComponent(component: viewModel.components[item])
+                    }
+                    .listRowInsets(EdgeInsets())
                 }
-                .listRowInsets(EdgeInsets())
+                .padding(.horizontal)
             }
-            .padding(.horizontal)
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+            .navigationBarTitle(Text("Productos"))
         }
-        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
-        .navigationBarTitle(Text("Productos"))
     }
     
     private func paintComponent(component: ListGridComponents) -> some View {
@@ -42,6 +45,16 @@ struct ListGridView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ListGridFactory.build()
+        ListGridFactory.build(dependencies: ListGridDependenciesExample.dependenices)
+    }
+}
+
+struct ListGridDependenciesExample {
+    static let dependenices = ListGridDependencies(columns: 3, components: ListGridDependenciesComponentsExample())
+}
+
+struct ListGridDependenciesComponentsExample: ListGridViewSetComponentsType {
+    func execute() async throws -> [ListGridComponents] {
+        return [.image(viewData: ExampleProductViewData())]
     }
 }

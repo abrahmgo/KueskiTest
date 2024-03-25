@@ -9,7 +9,10 @@ import SwiftUI
 import NukeUI
 import Nuke
 
+@MainActor
 public struct ImageView: View {
+    
+    @State private var listId = UUID()
     
     public let model: ImageViewDataType
     
@@ -18,7 +21,7 @@ public struct ImageView: View {
     }
     
     public var body: some View {
-        VStack {
+        VStack(spacing: 16) {
             LazyImage(url: model.url) { state in
                 if let image = state.image {
                     image
@@ -28,8 +31,16 @@ public struct ImageView: View {
                 } else {
                     Color.gray.opacity(0.2)
                 }
-            }
+            }.pipeline(pipeline)
         }
+    }
+    
+    private let pipeline = ImagePipeline {
+        $0.dataLoader = {
+            let config = URLSessionConfiguration.default
+            config.urlCache = nil
+            return DataLoader(configuration: config)
+        }()
     }
 }
 
@@ -47,9 +58,11 @@ public protocol ImageViewDataType {
     var price: String { get }
 }
 
-public struct ExampleProductViewData: ImageViewDataType {
+public struct ExampleProductViewData: ImageViewDataType, Identifiable {
     
     public init() { }
+    
+    public var id = UUID()
     
     public let title: String = "Xbox"
     public let url: URL? = URL(string: "https://image.tmdb.org/t/p/w1280/6Dc9mMl083cVpNknWzALCw7JYPH.jpg")

@@ -8,6 +8,8 @@
 import SwiftUI
 import CoreEntities
 import UI
+import NukeUI
+import NukeExtensions
 
 class ListGridViewModel: ListGridViewModelInputs, ListGridViewModelType, ListGridViewModelOutputs, ObservableObject {
     
@@ -25,25 +27,32 @@ class ListGridViewModel: ListGridViewModelInputs, ListGridViewModelType, ListGri
     init(dependencies: ListGridDependencies) {
         self.dependencies = dependencies
         
-        downloadData()
+        setComponents()
     }
     
-    func downloadData() { 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.components = [.image(viewData: ExampleProductViewData())]
+    func setComponents() {
+        Task {
+            do {
+                let components = try await dependencies.components.execute()
+                await MainActor.run {
+                    self.components = components
+                }
+            } catch {
+                print(error)
+            }
         }
     }
     
     func order(order: ContentOrder) {
-//        self.order = order
+        self.order = order
     }
     
-    func getColumns(order: ContentOrder) -> [GridItem] {
+    func getColumns(order: ContentOrder, side: CGFloat) -> [GridItem] {
         switch order {
         case .list:
-            return [GridItem(.flexible())]
+            return [GridItem(.fixed(side))]
         case .grid:
-            let data = Array(repeatElement(GridItem(.flexible()), count: dependencies.columns))
+            let data = Array(repeatElement(GridItem(.fixed(side)), count: dependencies.columns))
             return data
         }
     }

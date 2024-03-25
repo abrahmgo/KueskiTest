@@ -168,6 +168,7 @@
 		B62E82592BAD334C00FED650 /* TheMovieDB */ = {
 			isa = PBXGroup;
 			children = (
+				B69E00722BB1134F0035179E /* Home */,
 				B68F49AA2BAF532F002655DD /* Config */,
 				B62E825A2BAD334C00FED650 /* TheMovieDBApp.swift */,
 				B62E825E2BAD334E00FED650 /* Assets.xcassets */,
@@ -226,6 +227,13 @@
 				B68F49AD2BAF5364002655DD /* APIBundle.swift */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		B69E00722BB1134F0035179E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		F0C54857A2FB381BE600F7FB /* Pods */ = {

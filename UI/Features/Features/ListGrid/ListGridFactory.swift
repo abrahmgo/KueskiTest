@@ -10,8 +10,7 @@ import SwiftUI
 public struct ListGridFactory {
     
     @ViewBuilder
-    public static func build() -> some View {
-        let dependencies = ListGridDependencies(columns: 3)
+    public static func build(dependencies: ListGridDependencies) -> some View {
         let viewModel = ListGridViewModel(dependencies: dependencies)
         ListGridView(viewModel: viewModel)
     }
