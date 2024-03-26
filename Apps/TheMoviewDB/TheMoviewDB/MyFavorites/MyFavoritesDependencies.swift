@@ -26,8 +26,12 @@ class MyFavoritesDependencies: ListGridViewSetComponentsType, ListGridViewDelega
     func execute() async throws -> [Features.ListGridComponents] {
         let data = try await managerFavoriteMovieUseCase.getAll()
         let viewData = data.map({ImageViewData(url: $0.poster)})
-        let components = viewData.map({ListGridComponents.image(viewData: $0)})
+        var components = viewData.map({ListGridComponents.image(viewData: $0)})
         popularMovies = data
+        if components.isEmpty {
+            components = [.text(viewData: TextViewData(text: "Sin favoritos",
+                                                       font: .largeTitle))]
+        }
         return components
     }
     

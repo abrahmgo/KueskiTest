@@ -34,13 +34,15 @@ public struct ListGridDependencies {
     public let columns: Int
     public let components: ListGridViewSetComponentsType
     public let delegate: ListGridViewDelegate?
-    
+    public let reloadDataViewWillAppear: Bool
     
     public init(columns: Int, 
                 components: ListGridViewSetComponentsType,
-                delegate: ListGridViewDelegate? = nil) {
+                delegate: ListGridViewDelegate? = nil,
+                reloadDataViewWillAppear: Bool = false) {
         self.columns = columns
         self.components = components
         self.delegate = delegate
+        self.reloadDataViewWillAppear = reloadDataViewWillAppear
     }
 }

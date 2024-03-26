@@ -24,24 +24,38 @@ struct ListGridView: View {
         GeometryReader { geometry in
             ScrollView([.vertical], showsIndicators: true) {
                 let side = geometry.size.width / 4
-                let colums = viewModel.getColumns(order: viewModel.order, side: side)
-                LazyVGrid(columns: colums, alignment: .center) {
-                    let elements = viewModel.components.count
+                let colums = viewModel.outputs.getColumns(order: viewModel.order, side: side)
+                let elements = viewModel.outputs.components.count
+                let firstText = viewModel.outputs.components.first(where: { item in
+                    if case .text = item {
+                        return true
+                    }
+                    return false
+                })
+                if (firstText != nil) {
                     ForEach(0..<elements, id: \.self) { item in
-                        self.paint(component: viewModel.components[item])
-                            .onTapGesture {
-                                self.delegate?.itemSelected(index: item)
-                            }
-                            .onAppear {
-                                let isLast = (item + 1) == elements
-                                if isLast {
-                                    viewModel.inputs.requestMoreData()
-                                }
-                            }
+                        self.paint(component: viewModel.outputs.components[item])
                     }
                     .listRowInsets(EdgeInsets())
+                    .padding(.horizontal)
+                } else {
+                    LazyVGrid(columns: colums, alignment: .center) {
+                        ForEach(0..<elements, id: \.self) { item in
+                            self.paint(component: viewModel.outputs.components[item])
+                                .onTapGesture {
+                                    self.delegate?.itemSelected(index: item)
+                                }
+                                .onAppear {
+                                    let isLast = (item + 1) == elements
+                                    if isLast {
+                                        viewModel.inputs.requestMoreData()
+                                    }
+                                }
+                        }
+                        .listRowInsets(EdgeInsets())
+                    }
+                    .padding(.horizontal)
                 }
-                .padding(.horizontal)
             }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
             .navigationBarTitle(Text("TheMoviewDB"))
@@ -64,13 +78,19 @@ struct ListGridView: View {
                     }
                 }
             }
+            .onAppear {
+                viewModel.inputs.requestMoreData()
+            }
         }
     }
     
+    @ViewBuilder
     private func paint(component: ListGridComponents) -> some View {
         switch component {
         case .image(let viewData):
-            return ImageView(model: viewData)
+            ImageView(model: viewData)
+        case .text(let viewData):
+            TextView(model: viewData)
         }
     }
 }

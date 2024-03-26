@@ -14,6 +14,7 @@ public enum ListGridComponents: Identifiable {
     }
     
     case image(viewData: ImageViewDataType)
+    case text(viewData: TextViewDataType)
 }
 
 extension ListGridComponents {

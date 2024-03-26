@@ -16,6 +16,8 @@ struct MyFavoritesDependenciesFactory {
         let usecase = ManageFavoriteMovieUseCase()
         let dependencies = MyFavoritesDependencies(managerFavoriteMovieUseCase: usecase,
                                                    router: router)
-        return ListGridDependencies(columns: 3, components: dependencies, delegate: dependencies)
+        return ListGridDependencies(columns: 3, components: dependencies, 
+                                    delegate: dependencies,
+                                    reloadDataViewWillAppear: true)
     }
 }
