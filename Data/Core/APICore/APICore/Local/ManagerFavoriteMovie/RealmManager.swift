@@ -15,10 +15,6 @@ class RealmManager {
     static var shared: RealmManager = RealmManager()
     
     init() {
-        let identifier = "TheMovieDB"
-        let config = Realm.Configuration(
-            inMemoryIdentifier: identifier)
-        // Open the realm
-        localRealm = try! Realm(configuration: config)
+        localRealm = try! Realm(configuration: Realm.Configuration.defaultConfiguration)
     }
 }
