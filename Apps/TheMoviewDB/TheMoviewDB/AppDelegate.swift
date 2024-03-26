@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow()
         doNetwork()
-        let viewController: UIViewController = UINavigationController(rootViewController:  HomeFactory.build())
+        let viewController: UIViewController = PrincipalTabBarViewController()
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
         return true

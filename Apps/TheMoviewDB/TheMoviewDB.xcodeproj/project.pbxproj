@@ -18,7 +18,11 @@
 		B60253CC2BB1E69400890644 /* MovieFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60253CB2BB1E69400890644 /* MovieFactory.swift */; };
 		B60253ED2BB2694500890644 /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B60253EC2BB2694500890644 /* UI.framework */; };
 		B60253EE2BB2694500890644 /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B60253EC2BB2694500890644 /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B60253F12BB26ED000890644 /* MyFavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60253F02BB26ED000890644 /* MyFavoritesView.swift */; };
+		B60253F42BB26F5E00890644 /* PrincipalTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60253F32BB26F5E00890644 /* PrincipalTabBarViewController.swift */; };
+		B60253FA2BB2720200890644 /* MyFavoritesDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60253F92BB2720200890644 /* MyFavoritesDependencies.swift */; };
+		B60253FC2BB2725E00890644 /* MyFavoritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60253FB2BB2725E00890644 /* MyFavoritesRouter.swift */; };
+		B60253FE2BB2729500890644 /* MyFavoritesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60253FD2BB2729500890644 /* MyFavoritesFactory.swift */; };
+		B60254002BB272B600890644 /* MyFavoritesDependenciesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60253FF2BB272B600890644 /* MyFavoritesDependenciesFactory.swift */; };
 		B69E009C2BB1DBEA0035179E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E009B2BB1DBEA0035179E /* AppDelegate.swift */; };
 		B69E00A52BB1DBED0035179E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B69E00A42BB1DBED0035179E /* Assets.xcassets */; };
 		B69E00A82BB1DBED0035179E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B69E00A62BB1DBED0035179E /* LaunchScreen.storyboard */; };
@@ -100,7 +104,11 @@
 		B60253C72BB1E4FD00890644 /* Moview+Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moview+Dependencies.swift"; sourceTree = "<group>"; };
 		B60253CB2BB1E69400890644 /* MovieFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFactory.swift; sourceTree = "<group>"; };
 		B60253EC2BB2694500890644 /* UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B60253F02BB26ED000890644 /* MyFavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoritesView.swift; sourceTree = "<group>"; };
+		B60253F32BB26F5E00890644 /* PrincipalTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalTabBarViewController.swift; sourceTree = "<group>"; };
+		B60253F92BB2720200890644 /* MyFavoritesDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoritesDependencies.swift; sourceTree = "<group>"; };
+		B60253FB2BB2725E00890644 /* MyFavoritesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoritesRouter.swift; sourceTree = "<group>"; };
+		B60253FD2BB2729500890644 /* MyFavoritesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoritesFactory.swift; sourceTree = "<group>"; };
+		B60253FF2BB272B600890644 /* MyFavoritesDependenciesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoritesDependenciesFactory.swift; sourceTree = "<group>"; };
 		B69E00982BB1DBEA0035179E /* TheMoviewDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheMoviewDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B69E009B2BB1DBEA0035179E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B69E00A42BB1DBED0035179E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -196,9 +204,20 @@
 		B60253EF2BB26EBA00890644 /* MyFavorites */ = {
 			isa = PBXGroup;
 			children = (
-				B60253F02BB26ED000890644 /* MyFavoritesView.swift */,
+				B60253F92BB2720200890644 /* MyFavoritesDependencies.swift */,
+				B60253FB2BB2725E00890644 /* MyFavoritesRouter.swift */,
+				B60253FD2BB2729500890644 /* MyFavoritesFactory.swift */,
+				B60253FF2BB272B600890644 /* MyFavoritesDependenciesFactory.swift */,
 			);
 			path = MyFavorites;
+			sourceTree = "<group>";
+		};
+		B60253F22BB26F4400890644 /* PrincipalTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				B60253F32BB26F5E00890644 /* PrincipalTabBarViewController.swift */,
+			);
+			path = PrincipalTabBar;
 			sourceTree = "<group>";
 		};
 		B69E008F2BB1DBEA0035179E = {
@@ -226,6 +245,7 @@
 		B69E009A2BB1DBEA0035179E /* TheMoviewDB */ = {
 			isa = PBXGroup;
 			children = (
+				B60253F22BB26F4400890644 /* PrincipalTabBar */,
 				B60253EF2BB26EBA00890644 /* MyFavorites */,
 				B60253BE2BB1E16700890644 /* Movie */,
 				B60253B72BB1DF0D00890644 /* Config */,
@@ -464,17 +484,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				B69E00D12BB1DDB50035179E /* HomeDependenciesFactory.swift in Sources */,
+				B60253F42BB26F5E00890644 /* PrincipalTabBarViewController.swift in Sources */,
 				B60253CC2BB1E69400890644 /* MovieFactory.swift in Sources */,
 				B60253C62BB1E4F000890644 /* MovieViewModel.swift in Sources */,
+				B60253FE2BB2729500890644 /* MyFavoritesFactory.swift in Sources */,
 				B69E009C2BB1DBEA0035179E /* AppDelegate.swift in Sources */,
 				B60253BD2BB1DFDD00890644 /* HomeRouter.swift in Sources */,
 				B60253C82BB1E4FD00890644 /* Moview+Dependencies.swift in Sources */,
 				B60253BB2BB1DF0D00890644 /* APIConfig.swift in Sources */,
+				B60253FC2BB2725E00890644 /* MyFavoritesRouter.swift in Sources */,
 				B60253BA2BB1DF0D00890644 /* APIBundle.swift in Sources */,
 				B60253C42BB1E44C00890644 /* MovieComponents.swift in Sources */,
+				B60254002BB272B600890644 /* MyFavoritesDependenciesFactory.swift in Sources */,
 				B60253C02BB1E1F700890644 /* MovieView.swift in Sources */,
 				B69E00CF2BB1DDB50035179E /* HomeDependencies.swift in Sources */,
-				B60253F12BB26ED000890644 /* MyFavoritesView.swift in Sources */,
+				B60253FA2BB2720200890644 /* MyFavoritesDependencies.swift in Sources */,
 				B69E00D02BB1DDB50035179E /* HomeFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
