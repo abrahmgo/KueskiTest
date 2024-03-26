@@ -9,11 +9,13 @@ import SwiftUI
 import Features
 import UIKit
 import CoreEntities
+import CoreUseCases
 
 struct MovieFactory {
     static func build(movie: PopularMovie) -> UIViewController {
         
-        let dependencies = MovieDependencies(movie: movie)
+        let usecase = ManageFavoriteMovieUseCase()
+        let dependencies = MovieDependencies(movie: movie, managerStorageMovieUseCase: usecase)
         let viewModel = MovieViewModel(dependencies: dependencies)
         let view = MovieView(viewModel: viewModel)
         let viewController = UIHostingController(rootView: view)

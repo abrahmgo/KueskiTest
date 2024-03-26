@@ -15,6 +15,7 @@ class MovieViewModel: MovieViewModelInputs, MovieViewModelType, MovieViewModelOu
     
     // MARK: Outputs
     @Published public var components: [MovieComponents] = []
+    @Published public var favorite: Bool = false
     
     // MARK: Private
     private let dependencies: MovieDependencies
@@ -23,10 +24,42 @@ class MovieViewModel: MovieViewModelInputs, MovieViewModelType, MovieViewModelOu
         self.dependencies = dependencies
         
         setComponents()
+        verifyFavorite()
+    }
+    
+    func verifyFavorite() {
+        Task {
+            do {
+                let data = try await dependencies.managerStorageMovieUseCase.getAll()
+                let isFavorite = data.first(where: {$0.id == dependencies.movie.id})
+                await MainActor.run {
+                    self.favorite = (isFavorite != nil)
+                }
+            } catch {
+                print("error al recueprar info")
+            }
+        }
     }
     
     func setFavorite(status: Bool) {
-        print(status)
+        favorite = status
+        if status {
+            Task {
+                do {
+                    try await dependencies.managerStorageMovieUseCase.save(movie: dependencies.movie)
+                } catch {
+                    print("error al guardar")
+                }
+            }
+        } else {
+            Task {
+                do {
+                    try await dependencies.managerStorageMovieUseCase.delete(movie: dependencies.movie)
+                } catch {
+                    print("error al eliminar")
+                }
+            }
+        }
     }
     
     private func setComponents() {

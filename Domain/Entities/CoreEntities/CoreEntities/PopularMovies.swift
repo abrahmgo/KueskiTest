@@ -24,6 +24,7 @@ public struct PopularMovies {
 
 public struct PopularMovie {
     
+    public let id: Int
     public let originalLanguage: String
     public let originalTitle: String
     public let overview: String
@@ -34,10 +35,11 @@ public struct PopularMovie {
     public let voteAverage: Double
     public let voteCount: Int
     
-    public init(originalLanguage: String, originalTitle: String, 
+    public init(id: Int, originalLanguage: String, originalTitle: String,
                 overview: String, popularity: Double, poster: URL?,
                 releaseDate: Date, title: String,
                 voteAverage: Double, voteCount: Int) {
+        self.id = id
         self.originalLanguage = originalLanguage
         self.originalTitle = originalTitle
         self.overview = overview

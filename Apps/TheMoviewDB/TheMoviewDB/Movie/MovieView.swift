@@ -11,7 +11,6 @@ import UI
 struct MovieView: View {
     
     @ObservedObject private var viewModel: MovieViewModel
-    @State private var favorite: Bool = false
     
     init(viewModel: MovieViewModel) {
         self.viewModel = viewModel
@@ -19,17 +18,16 @@ struct MovieView: View {
     
     var body: some View {
         ScrollView([.vertical], showsIndicators: true) {
-            ForEach(0..<viewModel.components.count, id: \.self) { item in
+            ForEach(0..<viewModel.outputs.components.count, id: \.self) { item in
                 self.paint(component: viewModel.components[item])
             }
             .listRowInsets(EdgeInsets())
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
         .toolbar {
-            Image(systemName: favorite ? "star.fill" : "star")
+            Image(systemName: viewModel.outputs.favorite ? "star.fill" : "star")
                 .onTapGesture {
-                    favorite.toggle()
-                    viewModel.setFavorite(status: favorite)
+                    viewModel.inputs.setFavorite(status: viewModel.outputs.favorite ? false : true)
                 }
         }
     }

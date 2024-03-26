@@ -6,9 +6,11 @@
 //
 
 import CoreEntities
+import CoreUseCases
 
 protocol MovieViewModelOutputs {
     var components: [MovieComponents] { get }
+    var favorite: Bool { get }
 }
 
 protocol MovieViewModelInputs { 
@@ -24,8 +26,11 @@ protocol MovieViewModelType {
 struct MovieDependencies {
     
     let movie: PopularMovie
+    let managerStorageMovieUseCase: ManageFavoriteMovieUseCaseType
     
-    init(movie: PopularMovie) {
+    init(movie: PopularMovie,
+         managerStorageMovieUseCase: ManageFavoriteMovieUseCaseType) {
         self.movie = movie
+        self.managerStorageMovieUseCase = managerStorageMovieUseCase
     }
 }

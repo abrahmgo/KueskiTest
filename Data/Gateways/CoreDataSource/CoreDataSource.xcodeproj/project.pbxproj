@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B60253E12BB240A600890644 /* ManageFavoriteMovieRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60253E02BB240A600890644 /* ManageFavoriteMovieRemoteDataSource.swift */; };
 		B62E82BF2BAD362500FED650 /* CoreDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B62E82B62BAD362500FED650 /* CoreDataSource.framework */; };
 		B62E82C42BAD362500FED650 /* CoreDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E82C32BAD362500FED650 /* CoreDataSourceTests.swift */; };
 		B62E82C52BAD362500FED650 /* CoreDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = B62E82B92BAD362500FED650 /* CoreDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -25,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B60253E02BB240A600890644 /* ManageFavoriteMovieRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageFavoriteMovieRemoteDataSource.swift; sourceTree = "<group>"; };
 		B62E82B62BAD362500FED650 /* CoreDataSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreDataSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62E82B92BAD362500FED650 /* CoreDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataSource.h; sourceTree = "<group>"; };
 		B62E82BE2BAD362500FED650 /* CoreDataSourceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataSourceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B60253DF2BB2408300890644 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				B60253E02BB240A600890644 /* ManageFavoriteMovieRemoteDataSource.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
 		B62E82AC2BAD362500FED650 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +85,7 @@
 		B62E82B82BAD362500FED650 /* CoreDataSource */ = {
 			isa = PBXGroup;
 			children = (
+				B60253DF2BB2408300890644 /* Local */,
 				B68F499A2BAF3D95002655DD /* Remote */,
 				B62E82B92BAD362500FED650 /* CoreDataSource.h */,
 			);
@@ -215,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B60253E12BB240A600890644 /* ManageFavoriteMovieRemoteDataSource.swift in Sources */,
 				B68F499C2BAF3DA4002655DD /* PopularMoviesRemoteDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B60253D92BB2306F00890644 /* ManageFavoriteMovieUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60253D82BB2306F00890644 /* ManageFavoriteMovieUseCase.swift */; };
 		B62E83032BAD369200FED650 /* CoreUseCases.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B62E82FA2BAD369200FED650 /* CoreUseCases.framework */; };
 		B62E83082BAD369200FED650 /* CoreUseCasesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E83072BAD369200FED650 /* CoreUseCasesTests.swift */; };
 		B62E83092BAD369200FED650 /* CoreUseCases.h in Headers */ = {isa = PBXBuildFile; fileRef = B62E82FD2BAD369200FED650 /* CoreUseCases.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B60253D82BB2306F00890644 /* ManageFavoriteMovieUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageFavoriteMovieUseCase.swift; sourceTree = "<group>"; };
 		B62E82FA2BAD369200FED650 /* CoreUseCases.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreUseCases.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62E82FD2BAD369200FED650 /* CoreUseCases.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreUseCases.h; sourceTree = "<group>"; };
 		B62E83022BAD369200FED650 /* CoreUseCasesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreUseCasesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				B68F49B82BAF596D002655DD /* GetPopularMoviesUseCase.swift */,
+				B60253D82BB2306F00890644 /* ManageFavoriteMovieUseCase.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -141,6 +144,8 @@
 			dependencies = (
 			);
 			name = CoreUseCases;
+			packageProductDependencies = (
+			);
 			productName = CoreUseCases;
 			productReference = B62E82FA2BAD369200FED650 /* CoreUseCases.framework */;
 			productType = "com.apple.product-type.framework";
@@ -191,6 +196,8 @@
 				Base,
 			);
 			mainGroup = B62E82F02BAD369200FED650;
+			packageReferences = (
+			);
 			productRefGroup = B62E82FB2BAD369200FED650 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -224,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B68F49B92BAF596D002655DD /* GetPopularMoviesUseCase.swift in Sources */,
+				B60253D92BB2306F00890644 /* ManageFavoriteMovieUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

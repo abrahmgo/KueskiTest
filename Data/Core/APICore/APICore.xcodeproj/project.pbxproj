@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B60253DC2BB2403B00890644 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = B60253DB2BB2403B00890644 /* Realm */; };
+		B60253DE2BB2403B00890644 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B60253DD2BB2403B00890644 /* RealmSwift */; };
+		B60253E42BB253E100890644 /* ManageFavoriteMovieLocalAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60253E32BB253E100890644 /* ManageFavoriteMovieLocalAPI.swift */; };
+		B60253E72BB2542C00890644 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60253E62BB2542C00890644 /* RealmManager.swift */; };
+		B60253E92BB254DC00890644 /* RealmPopularMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60253E82BB254DC00890644 /* RealmPopularMovie.swift */; };
+		B60253EB2BB25B2600890644 /* CoreLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60253EA2BB25B2600890644 /* CoreLocalDataSource.swift */; };
 		B62E837B2BAD377300FED650 /* APICore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B62E83722BAD377300FED650 /* APICore.framework */; };
 		B62E83802BAD377300FED650 /* APICoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E837F2BAD377300FED650 /* APICoreTests.swift */; };
 		B62E83812BAD377300FED650 /* APICore.h in Headers */ = {isa = PBXBuildFile; fileRef = B62E83752BAD377300FED650 /* APICore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -35,6 +41,10 @@
 		2B9783A9B39D338C77DF20A6 /* Pods_APICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68444CE1E359A6508D6E332E /* Pods-APICore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APICore.debug.xcconfig"; path = "Target Support Files/Pods-APICore/Pods-APICore.debug.xcconfig"; sourceTree = "<group>"; };
 		7CFA6E3426774FEB4137C071 /* Pods-APICore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APICore.release.xcconfig"; path = "Target Support Files/Pods-APICore/Pods-APICore.release.xcconfig"; sourceTree = "<group>"; };
+		B60253E32BB253E100890644 /* ManageFavoriteMovieLocalAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageFavoriteMovieLocalAPI.swift; sourceTree = "<group>"; };
+		B60253E62BB2542C00890644 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		B60253E82BB254DC00890644 /* RealmPopularMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmPopularMovie.swift; sourceTree = "<group>"; };
+		B60253EA2BB25B2600890644 /* CoreLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLocalDataSource.swift; sourceTree = "<group>"; };
 		B62E83722BAD377300FED650 /* APICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = APICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62E83752BAD377300FED650 /* APICore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APICore.h; sourceTree = "<group>"; };
 		B62E837A2BAD377300FED650 /* APICoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APICoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,10 +64,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B60253DE2BB2403B00890644 /* RealmSwift in Frameworks */,
 				B68F49A52BAF3E97002655DD /* CoreDataSource.framework in Frameworks */,
 				B68F49932BAF3A37002655DD /* CoreEntities.framework in Frameworks */,
 				DA6349619ABCE8370C2D3DB1 /* Pods_APICore.framework in Frameworks */,
 				B68F49972BAF3C57002655DD /* NetworkCore.framework in Frameworks */,
+				B60253DC2BB2403B00890644 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +105,24 @@
 			path = ../../../Pods;
 			sourceTree = "<group>";
 		};
+		B60253E22BB253CF00890644 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				B60253E52BB2541000890644 /* ManagerFavoriteMovie */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		B60253E52BB2541000890644 /* ManagerFavoriteMovie */ = {
+			isa = PBXGroup;
+			children = (
+				B60253E32BB253E100890644 /* ManageFavoriteMovieLocalAPI.swift */,
+				B60253E82BB254DC00890644 /* RealmPopularMovie.swift */,
+				B60253E62BB2542C00890644 /* RealmManager.swift */,
+			);
+			path = ManagerFavoriteMovie;
+			sourceTree = "<group>";
+		};
 		B62E83682BAD377300FED650 = {
 			isa = PBXGroup;
 			children = (
@@ -116,9 +146,11 @@
 		B62E83742BAD377300FED650 /* APICore */ = {
 			isa = PBXGroup;
 			children = (
+				B60253E22BB253CF00890644 /* Local */,
 				B68F49822BAF38DA002655DD /* Remote */,
 				B62E83752BAD377300FED650 /* APICore.h */,
 				B68F49AF2BAF53BC002655DD /* CoreRemoteDataSource.swift */,
+				B60253EA2BB25B2600890644 /* CoreLocalDataSource.swift */,
 			);
 			path = APICore;
 			sourceTree = "<group>";
@@ -179,6 +211,10 @@
 			dependencies = (
 			);
 			name = APICore;
+			packageProductDependencies = (
+				B60253DB2BB2403B00890644 /* Realm */,
+				B60253DD2BB2403B00890644 /* RealmSwift */,
+			);
 			productName = APICore;
 			productReference = B62E83722BAD377300FED650 /* APICore.framework */;
 			productType = "com.apple.product-type.framework";
@@ -228,6 +264,9 @@
 				Base,
 			);
 			mainGroup = B62E83682BAD377300FED650;
+			packageReferences = (
+				B60253DA2BB2403B00890644 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = B62E83732BAD377300FED650 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -286,9 +325,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B68F49892BAF3907002655DD /* PopularMoviesResponseModel+Mapper.swift in Sources */,
+				B60253EB2BB25B2600890644 /* CoreLocalDataSource.swift in Sources */,
 				B68F49B02BAF53BC002655DD /* CoreRemoteDataSource.swift in Sources */,
+				B60253E42BB253E100890644 /* ManageFavoriteMovieLocalAPI.swift in Sources */,
 				B68F498D2BAF3907002655DD /* PopularMoviesResponseModel.swift in Sources */,
 				B68F498C2BAF3907002655DD /* PopularMoviesAPI.swift in Sources */,
+				B60253E72BB2542C00890644 /* RealmManager.swift in Sources */,
+				B60253E92BB254DC00890644 /* RealmPopularMovie.swift in Sources */,
 				B68F498A2BAF3907002655DD /* PopularMoviesEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,6 +605,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B60253DA2BB2403B00890644 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.49.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B60253DB2BB2403B00890644 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B60253DA2BB2403B00890644 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		B60253DD2BB2403B00890644 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B60253DA2BB2403B00890644 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B62E83692BAD377300FED650 /* Project object */;
 }

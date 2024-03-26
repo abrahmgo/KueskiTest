@@ -286,6 +286,8 @@
 			dependencies = (
 			);
 			name = TheMoviewDB;
+			packageProductDependencies = (
+			);
 			productName = TheMoviewDB;
 			productReference = B69E00982BB1DBEA0035179E /* TheMoviewDB.app */;
 			productType = "com.apple.product-type.application";
@@ -358,6 +360,8 @@
 				Base,
 			);
 			mainGroup = B69E008F2BB1DBEA0035179E;
+			packageReferences = (
+			);
 			productRefGroup = B69E00992BB1DBEA0035179E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

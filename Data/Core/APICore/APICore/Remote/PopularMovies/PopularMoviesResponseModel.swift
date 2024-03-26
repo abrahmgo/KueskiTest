@@ -46,7 +46,8 @@ struct PopularMovieResultResponseModel: Codable {
 extension PopularMovieResultResponseModel {
     
     func mapTo() -> PopularMovie {
-        return PopularMovie(originalLanguage: original_language,
+        return PopularMovie(id: id,
+                            originalLanguage: original_language,
                             originalTitle: original_title,
                             overview: overview,
                             popularity: popularity,
