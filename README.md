@@ -42,3 +42,7 @@ select the  target `TheMoviewDB` and your favorite iphone, run it.
 ### The app
 
 The demo was coded with a combination between swift ui and ui kit, everything was separated into layers, taking into account clean architecture as a reference, where the lower layers do not know upper layers, everything is decoupled
+
+### Why use a gemfile?
+
+It is essential that the entire development team work on the same version of dependencies, thus ensuring that they work in the same environment
