@@ -33,3 +33,12 @@ If everything works great, open `KueskiTest.xcworkspace` and SPM start installin
 ### Run
 
 select the  target `TheMoviewDB` and your favorite iphone, run it.
+
+### Project Dependencies
+
+- Nuke (for image)
+- Alamofire (for request)
+
+### The app
+
+The demo was coded with a combination between swift ui and ui kit, everything was separated into layers, taking into account clean architecture as a reference, where the lower layers do not know upper layers, everything is decoupled
