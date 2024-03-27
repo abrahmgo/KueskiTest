@@ -12,6 +12,9 @@ target 'TheMoviewDB' do
   
   networking
   
+  target 'TheMoviewDBTests' do
+    inherit! :search_paths
+  end
 end
 
 ## NetworkCore

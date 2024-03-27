@@ -16,6 +16,9 @@
 		B68F49C02BAF5986002655DD /* CoreEntities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68F49BF2BAF5986002655DD /* CoreEntities.framework */; };
 		B68F49C42BAF5990002655DD /* APICore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68F49C32BAF5990002655DD /* APICore.framework */; };
 		B6A8605D2BB3DFDE006BB61B /* GetPlayingMoviesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A8605C2BB3DFDE006BB61B /* GetPlayingMoviesUseCase.swift */; };
+		B6A860982BB4B335006BB61B /* APICore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A860972BB4B335006BB61B /* APICore.framework */; };
+		B6A8609C2BB4B33C006BB61B /* CoreDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A8609B2BB4B33C006BB61B /* CoreDataSource.framework */; };
+		B6A8609F2BB4B348006BB61B /* CoreEntities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A8609E2BB4B348006BB61B /* CoreEntities.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,9 @@
 		B68F49BF2BAF5986002655DD /* CoreEntities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreEntities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B68F49C32BAF5990002655DD /* APICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6A8605C2BB3DFDE006BB61B /* GetPlayingMoviesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlayingMoviesUseCase.swift; sourceTree = "<group>"; };
+		B6A860972BB4B335006BB61B /* APICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6A8609B2BB4B33C006BB61B /* CoreDataSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreDataSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6A8609E2BB4B348006BB61B /* CoreEntities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreEntities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6A8609F2BB4B348006BB61B /* CoreEntities.framework in Frameworks */,
+				B6A860982BB4B335006BB61B /* APICore.framework in Frameworks */,
+				B6A8609C2BB4B33C006BB61B /* CoreDataSource.framework in Frameworks */,
 				B62E83032BAD369200FED650 /* CoreUseCases.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,6 +94,7 @@
 		B62E82FC2BAD369200FED650 /* CoreUseCases */ = {
 			isa = PBXGroup;
 			children = (
+				B6A860912BB4AE7C006BB61B /* Local */,
 				B68F49B72BAF595A002655DD /* Remote */,
 				B62E82FD2BAD369200FED650 /* CoreUseCases.h */,
 			);
@@ -103,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				B68F49B82BAF596D002655DD /* GetPopularMoviesUseCase.swift */,
-				B60253D82BB2306F00890644 /* ManageFavoriteMovieUseCase.swift */,
 				B6A8605C2BB3DFDE006BB61B /* GetPlayingMoviesUseCase.swift */,
 			);
 			path = Remote;
@@ -112,11 +121,22 @@
 		B68F49BA2BAF5978002655DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B6A8609E2BB4B348006BB61B /* CoreEntities.framework */,
+				B6A8609B2BB4B33C006BB61B /* CoreDataSource.framework */,
+				B6A860972BB4B335006BB61B /* APICore.framework */,
 				B68F49C32BAF5990002655DD /* APICore.framework */,
 				B68F49BF2BAF5986002655DD /* CoreEntities.framework */,
 				B68F49BB2BAF5978002655DD /* CoreDataSource.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B6A860912BB4AE7C006BB61B /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				B60253D82BB2306F00890644 /* ManageFavoriteMovieUseCase.swift */,
+			);
+			path = Local;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,7 +469,6 @@
 		B62E83102BAD369200FED650 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -465,7 +484,6 @@
 		B62E83112BAD369200FED650 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
