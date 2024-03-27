@@ -23,7 +23,14 @@ public struct ImageView: View {
     public var body: some View {
         VStack(spacing: 16) {
             getDownloadImage()
-        }.frame(width: 100, height: 150)
+            Text("18")
+                .background(
+                    Circle()
+                        .stroke(.red, lineWidth: 20)
+                        .fill(.orange)
+                        .frame(width: 10, height: 10))
+                .padding(.bottom)
+        }.frame(width: 100, height: 190)
     }
     
     @ViewBuilder
@@ -38,6 +45,7 @@ public struct ImageView: View {
                 Color.gray.opacity(0.2)
             }
         }.pipeline(pipeline)
+        
     }
     
     private let pipeline = ImagePipeline {

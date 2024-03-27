@@ -71,33 +71,35 @@ class MovieViewModel: MovieViewModelInputs, MovieViewModelType, MovieViewModelOu
         let posterViewData = ImageViewData(url: dependencies.movie.poster)
         let posterComponent = MovieComponents.image(viewData: posterViewData)
         
-        let genresViewData = TextViewData(text: dependencies.movie.title)
-        let genresComponent = MovieComponents.text(viewData: genresViewData)
-        
         let overviewTitleViewData = TextViewData(text: "Overview", style: .headline)
         let overviewTitleComponent = MovieComponents.text(viewData: overviewTitleViewData)
         
         let overviewViewData = TextViewData(text: dependencies.movie.overview)
         let overviewComponent = MovieComponents.text(viewData: overviewViewData)
         
-        let popularityViewData = TextViewData(text: dependencies.movie.popularity.description)
-        let popularityComponent = MovieComponents.text(viewData: popularityViewData)
+        let releaseTitleViewData = TextViewData(text: "Release Date", style: .headline)
+        let releaseTitleComponent = MovieComponents.text(viewData: releaseTitleViewData)
         
         let releaseViewData = TextViewData(text: dependencies.movie.releaseDate.toSring(format: .dayMonthYearComa))
         let releaseComponent = MovieComponents.text(viewData: releaseViewData)
         
+        let languageTitleViewData = TextViewData(text: "Original Language", style: .headline)
+        let languageTitleComponent = MovieComponents.text(viewData: languageTitleViewData)
+        
         let languagesViewData = TextViewData(text: dependencies.movie.originalLanguage)
         let languagesComponent = MovieComponents.text(viewData: languagesViewData)
         
-        let rateViewData = TextViewData(text: dependencies.movie.voteAverage.description)
+        let rateTitleViewData = TextViewData(text: "Rate", style: .headline)
+        let rateTitleComponent = MovieComponents.text(viewData: rateTitleViewData)
+        
+        let rate = String(format: "%.0f", (dependencies.movie.voteAverage * 10))
+        let rateViewData = TextViewData(text: rate.description + " %")
         let rateComponent = MovieComponents.text(viewData: rateViewData)
         
-        let statusViewData = TextViewData(text: dependencies.movie.title)
-        let statusComponent = MovieComponents.text(viewData: statusViewData)
-        
-        components = [titleComponent, posterComponent, genresComponent,
+        components = [titleComponent, posterComponent,
                       overviewTitleComponent, overviewComponent,
-                      popularityComponent, releaseComponent, languagesComponent, rateComponent,
-                      statusComponent]
+                      releaseTitleComponent, releaseComponent,
+                      languageTitleComponent, languagesComponent, 
+                      rateTitleComponent, rateComponent]
     }
 }

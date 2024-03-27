@@ -22,6 +22,7 @@ public struct TextView: View {
             Text(model.text)
                 .font(model.style.font)
                 .frame(maxWidth: .infinity, alignment: model.style.alignment)
+            Spacer(minLength: 2)
         }
     }
 }
