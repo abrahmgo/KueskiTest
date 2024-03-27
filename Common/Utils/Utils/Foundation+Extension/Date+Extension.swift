@@ -26,4 +26,8 @@ public extension Date {
         let stringDate = dateFormatter.string(from: self)
         return stringDate
     }
+    
+    func addOrSubtractDay(days: Int) -> Date {
+        return Calendar.current.date(byAdding: .day, value: days, to: Date())!
+    }
 }

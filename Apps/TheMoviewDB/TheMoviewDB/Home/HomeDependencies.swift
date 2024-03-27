@@ -34,7 +34,7 @@ class HomeDependencies: ListGridViewSetComponentsType, ListGridViewDelegate {
                                          sort: .popularityDesc)
         if currentFilter == .playing {
             model.maxDate = Date()
-            model.minDate = Date()
+            model.minDate = Date().addOrSubtractDay(days: -7)
             popularMovies = try await getPlayingMoviesUseCase.execute(model: model)
         } else {
             
