@@ -19,6 +19,7 @@
 		B65536702BAF73EF00D4CD5A /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B655366F2BAF73EF00D4CD5A /* ImageView.swift */; };
 		B69E00762BB114640035179E /* ImageViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E00752BB114640035179E /* ImageViewData.swift */; };
 		B6A8608E2BB3E56C006BB61B /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A8608D2BB3E56C006BB61B /* TextStyle.swift */; };
+		B6A860902BB4A58C006BB61B /* RateStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A8608F2BB4A58C006BB61B /* RateStyle.swift */; };
 		B6DD1B382BAF8683002381FD /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = B6DD1B372BAF8683002381FD /* Nuke */; };
 		B6DD1B3A2BAF8683002381FD /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = B6DD1B392BAF8683002381FD /* NukeExtensions */; };
 		B6DD1B3C2BAF8683002381FD /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = B6DD1B3B2BAF8683002381FD /* NukeUI */; };
@@ -47,6 +48,7 @@
 		B655366F2BAF73EF00D4CD5A /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		B69E00752BB114640035179E /* ImageViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewData.swift; sourceTree = "<group>"; };
 		B6A8608D2BB3E56C006BB61B /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
+		B6A8608F2BB4A58C006BB61B /* RateStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateStyle.swift; sourceTree = "<group>"; };
 		D720E574A662C06970C074A2 /* Pods-UI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UI.release.xcconfig"; path = "Target Support Files/Pods-UI/Pods-UI.release.xcconfig"; sourceTree = "<group>"; };
 		E459225E8096E6A3D981C01F /* Pods-UI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UI.debug.xcconfig"; path = "Target Support Files/Pods-UI/Pods-UI.debug.xcconfig"; sourceTree = "<group>"; };
 		F1659116AB083B6385C30829 /* Pods_UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				B6A8608D2BB3E56C006BB61B /* TextStyle.swift */,
+				B6A8608F2BB4A58C006BB61B /* RateStyle.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				B60254032BB2948000890644 /* Toast.swift in Sources */,
 				B65536702BAF73EF00D4CD5A /* ImageView.swift in Sources */,
 				B60254052BB294B100890644 /* ToastView.swift in Sources */,
+				B6A860902BB4A58C006BB61B /* RateStyle.swift in Sources */,
 				B60253CA2BB1E5F700890644 /* TextViewData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

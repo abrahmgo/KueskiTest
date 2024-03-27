@@ -40,7 +40,7 @@ class HomeDependencies: ListGridViewSetComponentsType, ListGridViewDelegate {
             
             popularMovies = try await getPopularMoviesUseCase.execute(model: model)
         }
-        let viewData = popularMovies.map({ImageViewData(url: $0.poster)})
+        let viewData = popularMovies.map({ImageViewData(url: $0.poster, rate: $0.voteAverage * 10)})
         let components = viewData.map({ListGridComponents.image(viewData: $0)})
         return components
     }

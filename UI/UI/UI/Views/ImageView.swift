@@ -23,11 +23,13 @@ public struct ImageView: View {
     public var body: some View {
         VStack(spacing: 16) {
             getDownloadImage()
-            Text("18")
+            let rateStyle = RateStyle(rate: model.rate) ?? .almost
+            let rateText = String(format: "%.0f", (model.rate))
+            Text(rateText)
                 .background(
                     Circle()
-                        .stroke(.red, lineWidth: 20)
-                        .fill(.orange)
+                        .stroke(rateStyle.stroke, lineWidth: 20)
+                        .fill(rateStyle.background)
                         .frame(width: 10, height: 10))
                 .padding(.bottom)
         }.frame(width: 100, height: 190)
@@ -67,6 +69,7 @@ struct ImageViewl_Previews: PreviewProvider {
 public protocol ImageViewDataType {
     
     var url: URL? { get }
+    var rate: Double { get }
 }
 
 public struct ExampleImageViewData: ImageViewDataType, Identifiable {
@@ -75,4 +78,5 @@ public struct ExampleImageViewData: ImageViewDataType, Identifiable {
     
     public var id = UUID()
     public let url: URL? = URL(string: "https://image.tmdb.org/t/p/w1280/6Dc9mMl083cVpNknWzALCw7JYPH.jpg")
+    public let rate: Double = 50
 }

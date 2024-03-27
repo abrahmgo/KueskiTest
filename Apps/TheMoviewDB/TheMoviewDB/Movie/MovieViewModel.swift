@@ -64,11 +64,12 @@ class MovieViewModel: MovieViewModelInputs, MovieViewModelType, MovieViewModelOu
     }
     
     private func setComponents() {
+        let voteRate = dependencies.movie.voteAverage * 10
         
         let titleViewData = TextViewData(text: dependencies.movie.title, style: .title)
         let titleComponent = MovieComponents.text(viewData: titleViewData)
         
-        let posterViewData = ImageViewData(url: dependencies.movie.poster)
+        let posterViewData = ImageViewData(url: dependencies.movie.poster, rate: voteRate)
         let posterComponent = MovieComponents.image(viewData: posterViewData)
         
         let overviewTitleViewData = TextViewData(text: "Overview", style: .headline)
@@ -92,8 +93,8 @@ class MovieViewModel: MovieViewModelInputs, MovieViewModelType, MovieViewModelOu
         let rateTitleViewData = TextViewData(text: "Rate", style: .headline)
         let rateTitleComponent = MovieComponents.text(viewData: rateTitleViewData)
         
-        let rate = String(format: "%.0f", (dependencies.movie.voteAverage * 10))
-        let rateViewData = TextViewData(text: rate.description + " %")
+        let rate = String(format: "%.0f", voteRate)
+        let rateViewData = TextViewData(text: rate + " %")
         let rateComponent = MovieComponents.text(viewData: rateViewData)
         
         components = [titleComponent, posterComponent,
