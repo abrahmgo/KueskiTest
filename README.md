@@ -26,6 +26,11 @@ bundle install
 bundle exec pod install --repo-update
 ```
 
+### Problems?
+
+Use homebrew to install the dependencies and then run the previous commands
+
+
 ### Workspace and SPM
 
 If everything works great, open `KueskiTest.xcworkspace` and SPM start installing certain dependencies.
