@@ -13,11 +13,14 @@ protocol ListGridViewModelOutputs {
     var components: [ListGridComponents] { get }
     
     func getColumns(order: ContentOrder, side: CGFloat) -> [GridItem]
+    func showFilter() -> Bool
+    func getTitlesFilter() -> [String]
 }
 
 protocol ListGridViewModelInputs {
     func order(order: ContentOrder)
     func requestMoreData()
+    func viewWillAppear()
 }
 
 protocol ListGridViewModelType {
@@ -29,20 +32,31 @@ public protocol ListGridViewSetComponentsType {
     func execute() async throws -> [ListGridComponents]
 }
 
+public protocol ListGridViewFilter {
+    var title: String { get }
+    var elements: [any RawRepresentable] { get }
+}
+
 public struct ListGridDependencies {
     
     public let columns: Int
     public let components: ListGridViewSetComponentsType
     public let delegate: ListGridViewDelegate?
     public let reloadDataViewWillAppear: Bool
+    public let withFilter: Bool
+    public let dataFilter: ListGridViewFilter?
     
     public init(columns: Int, 
                 components: ListGridViewSetComponentsType,
                 delegate: ListGridViewDelegate? = nil,
-                reloadDataViewWillAppear: Bool = false) {
+                reloadDataViewWillAppear: Bool = false,
+                withFilter: Bool = false,
+                dataFilter: ListGridViewFilter? = nil) {
         self.columns = columns
         self.components = components
         self.delegate = delegate
         self.reloadDataViewWillAppear = reloadDataViewWillAppear
+        self.withFilter = withFilter
+        self.dataFilter = dataFilter
     }
 }

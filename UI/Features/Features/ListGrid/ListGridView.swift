@@ -63,12 +63,12 @@ struct ListGridView: View {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Menu {
                         Button {
-                            viewModel.order(order: .list)
+                            viewModel.inputs.order(order: .list)
                         } label: {
                             Label("List", systemImage: "list.bullet")
                         }
                         Button {
-                            viewModel.order(order: .grid)
+                            viewModel.inputs.order(order: .grid)
                         } label: {
                             Label("Grid", systemImage: "square.grid.3x3")
                         }
@@ -77,9 +77,27 @@ struct ListGridView: View {
                             .labelStyle(.titleOnly)
                     }
                 }
+                if viewModel.outputs.showFilter() {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Menu {
+                            let elements = viewModel.outputs.getTitlesFilter()
+                            ForEach(0..<elements.count, id: \.self) { item in
+                                Button {
+                                    delegate?.itemFilterSelected(index: item)
+                                } label: {
+                                    Label(elements[item], systemImage: "line.3.horizontal.decrease.circle")
+                                }
+                            }
+                            
+                        } label: {
+                            Label("Filtro", systemImage: "viewfinder")
+                                .labelStyle(.titleOnly)
+                        }
+                    }
+                }
             }
             .onAppear {
-                viewModel.inputs.requestMoreData()
+                viewModel.inputs.viewWillAppear()
             }
         }
     }
@@ -97,7 +115,13 @@ struct ListGridView: View {
 
 public protocol ListGridViewDelegate: AnyObject {
     func itemSelected(index: Int)
+    func itemFilterSelected(index: Int)
 }
+
+public extension ListGridViewDelegate {
+    func itemFilterSelected(index: Int) { }
+}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

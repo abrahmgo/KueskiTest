@@ -11,8 +11,8 @@ import CoreEntities
 import UI
 import SwiftUI
 
-class MyFavoritesDependencies: ListGridViewSetComponentsType, ListGridViewDelegate {
-    
+class MyFavoritesDependencies: ListGridViewSetComponentsType, ListGridViewDelegate {    
+
     private let managerFavoriteMovieUseCase: ManageFavoriteMovieUseCaseType
     private var popularMovies: [PopularMovie] = []
     private let router: MyFavoritesRouterType

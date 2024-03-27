@@ -11,6 +11,7 @@ import UI
 struct MovieView: View {
     
     @ObservedObject private var viewModel: MovieViewModel
+    @State private var toast: Toast? = nil
     
     init(viewModel: MovieViewModel) {
         self.viewModel = viewModel
@@ -23,13 +24,19 @@ struct MovieView: View {
             }
             .listRowInsets(EdgeInsets())
         }
+        .listRowInsets(EdgeInsets())
+        .padding(.horizontal)
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
         .toolbar {
             Image(systemName: viewModel.outputs.favorite ? "star.fill" : "star")
                 .onTapGesture {
+                    toast = Toast(style: viewModel.outputs.favorite ? .info : .success,
+                                  message: viewModel.outputs.favorite ? "Eliminada" : "Favorita",
+                                  width: 260)
                     viewModel.inputs.setFavorite(status: viewModel.outputs.favorite ? false : true)
                 }
         }
+        .toastView(toast: $toast)
     }
     
     @ViewBuilder

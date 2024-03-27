@@ -58,8 +58,20 @@ class ListGridViewModel: ListGridViewModelInputs, ListGridViewModelType, ListGri
     }
     
     func requestMoreData() {
+        setComponents()
+    }
+    
+    func viewWillAppear() {
         if dependencies.reloadDataViewWillAppear {
             setComponents()
         }
+    }
+    
+    func showFilter() -> Bool {
+        return dependencies.withFilter
+    }
+    
+    func getTitlesFilter() -> [String] {
+        return dependencies.dataFilter?.elements.map({$0.rawValue as? String ?? ""}) ?? []
     }
 }

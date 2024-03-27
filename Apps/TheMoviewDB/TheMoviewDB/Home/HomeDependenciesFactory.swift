@@ -16,6 +16,7 @@ struct HomeDependenciesFactory {
         let usecase = GetPopularMoviesWPaginationUseCase()
         let dependencies = HomeDependencies(getPopularMoviesUseCase: usecase, 
                                             router: router)
-        return ListGridDependencies(columns: 3, components: dependencies, delegate: dependencies)
+        return ListGridDependencies(columns: 3, components: dependencies, 
+                                    delegate: dependencies, withFilter: true, dataFilter: dependencies)
     }
 }

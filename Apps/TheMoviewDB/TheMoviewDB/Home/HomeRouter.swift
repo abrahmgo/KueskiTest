@@ -14,6 +14,7 @@ class HomeRouter: HomeRouterType {
     
     func goTo(movie: PopularMovie) {
         let viewController = MovieFactory.build(movie: movie)
+        viewController.hidesBottomBarWhenPushed = true
         view?.navigationController?.pushViewController(viewController, animated: true)
     }
 }

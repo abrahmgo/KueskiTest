@@ -39,4 +39,24 @@ class HomeDependencies: ListGridViewSetComponentsType, ListGridViewDelegate {
         let movie = popularMovies[index]
         router.goTo(movie: movie)
     }
+    
+    func itemFilterSelected(index: Int) {
+        print(elements[index])
+    }
+}
+
+extension HomeDependencies: ListGridViewFilter {
+    
+    var title: String {
+        get { "Movies" }
+    }
+    
+    var elements: [any RawRepresentable] {
+        get { [HomeFilterType.playing, HomeFilterType.popular] }
+    }
+}
+
+enum HomeFilterType: String {
+    case popular
+    case playing
 }
