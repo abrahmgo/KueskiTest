@@ -39,6 +39,10 @@ select the  target `TheMoviewDB` and your favorite iphone, run it.
 - Nuke (for image)
 - Alamofire (for request)
 
+### Do you want to run in mock mode?
+
+Go to file `APIConfig` in main app, and change the var `useSampleData` to true to run with sample data, or false if you want to run with real data
+
 ### The app
 
 The demo was coded with a combination between swift ui and ui kit, everything was separated into layers, taking into account clean architecture as a reference, where the lower layers do not know upper layers, everything is decoupled
