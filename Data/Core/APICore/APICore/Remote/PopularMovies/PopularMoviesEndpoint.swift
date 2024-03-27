@@ -26,7 +26,10 @@ enum PopularMoviesEndpoint: NetworkTargetType {
     }
     
     var sampleData: Data? {
-        return nil
+        let bundle = CoreRemoteDataSource.bundle
+        let sampleData = NetworkCoreSampleData(bundle: bundle)
+        
+        return sampleData.getData(for: "PopularMovies")
     }
     
     var parameters: Parameters? {

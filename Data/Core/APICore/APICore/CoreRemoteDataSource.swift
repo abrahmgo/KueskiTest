@@ -10,6 +10,10 @@ import CoreDataSource
 
 public struct CoreRemoteDataSource {
     
+    static var bundle: Bundle? {
+        return Bundle(identifier: "andres.com.APICore")
+    }
+    
     public static var popularMoviesAPI: PopularMoviesRemoteDataSource {
         return PopularMoviesAPI(service: NetworkCoreAPIConfig.shared.networkService)
     }

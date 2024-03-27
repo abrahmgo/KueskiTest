@@ -23,7 +23,7 @@ struct APIConfig: NetworkCoreAPIConfigType {
     
     static var useSampleData: Bool {
         #if DEBUG
-        return false
+        return true
         #else
         return false
         #endif
