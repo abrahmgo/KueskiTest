@@ -8,6 +8,7 @@
 import CoreEntities
 import NetworkCore
 import Alamofire
+import Utils
 
 enum PopularMoviesEndpoint: NetworkTargetType {
     
@@ -43,8 +44,8 @@ enum PopularMoviesEndpoint: NetworkTargetType {
             if let minDate = model.minDate,
                let maxDate = model.maxDate {
                 param["with_release_type"] =  "2|3"
-                param[ "release_date.gte"] = minDate.description
-                param["release_date.lte"] = maxDate.description
+                param[ "release_date.gte"] = minDate.toSring(format: .middleDash)
+                param["release_date.lte"] = maxDate.toSring(format: .middleDash)
             }
             return param
         }

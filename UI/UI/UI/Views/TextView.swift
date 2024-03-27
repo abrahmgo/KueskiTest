@@ -20,7 +20,8 @@ public struct TextView: View {
     public var body: some View {
         VStack(spacing: 16) {
             Text(model.text)
-                .font(model.font)
+                .font(model.style.font)
+                .frame(maxWidth: .infinity, alignment: model.style.alignment)
         }
     }
 }
@@ -35,7 +36,7 @@ struct ImageView2_Previews: PreviewProvider {
 public protocol TextViewDataType {
     
     var text: String { get }
-    var font: Font { get }
+    var style: TextStyle { get }
 }
 
 public struct ExampleTextViewData: TextViewDataType, Identifiable {
@@ -44,6 +45,6 @@ public struct ExampleTextViewData: TextViewDataType, Identifiable {
     
     public var id = UUID()
     public let text: String = "Holi"
-    public let font: Font = .largeTitle
+    public let style: TextStyle = .title
 }
 

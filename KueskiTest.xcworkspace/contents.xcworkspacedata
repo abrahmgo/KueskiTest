@@ -57,6 +57,9 @@
       location = "group:Common"
       name = "Common">
       <FileRef
+         location = "group:Utils/Utils.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:Analytics/Analytics.xcodeproj">
       </FileRef>
    </Group>

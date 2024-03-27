@@ -6,6 +6,7 @@
 //
 
 import CoreEntities
+import Utils
 
 struct PopularMoviesResponseModel: Codable {
     
@@ -35,7 +36,7 @@ struct PopularMovieResultResponseModel: Codable {
     let original_title: String
     let overview: String
     let popularity: Double
-    let poster_path: String
+    let poster_path: String?
     let release_date: String
     let title: String
     let video: Bool
@@ -51,8 +52,8 @@ extension PopularMovieResultResponseModel {
                             originalTitle: original_title,
                             overview: overview,
                             popularity: popularity,
-                            poster: URL(string: "https://image.tmdb.org/t/p/w1280" + poster_path),
-                            releaseDate: Date(),
+                            poster: URL(string: "https://image.tmdb.org/t/p/w1280" + (poster_path ?? "")),
+                            releaseDate: release_date.toDate(formatter: .middleDash) ?? Date(),
                             title: title,
                             voteAverage: vote_average,
                             voteCount: vote_count)

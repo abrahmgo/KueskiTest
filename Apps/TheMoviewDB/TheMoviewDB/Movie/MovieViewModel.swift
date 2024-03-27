@@ -6,6 +6,7 @@
 //
 
 import UI
+import Utils
 
 class MovieViewModel: MovieViewModelInputs, MovieViewModelType, MovieViewModelOutputs, ObservableObject {
     
@@ -64,7 +65,7 @@ class MovieViewModel: MovieViewModelInputs, MovieViewModelType, MovieViewModelOu
     
     private func setComponents() {
         
-        let titleViewData = TextViewData(text: dependencies.movie.title, font: .largeTitle)
+        let titleViewData = TextViewData(text: dependencies.movie.title, style: .title)
         let titleComponent = MovieComponents.text(viewData: titleViewData)
         
         let posterViewData = ImageViewData(url: dependencies.movie.poster)
@@ -73,13 +74,16 @@ class MovieViewModel: MovieViewModelInputs, MovieViewModelType, MovieViewModelOu
         let genresViewData = TextViewData(text: dependencies.movie.title)
         let genresComponent = MovieComponents.text(viewData: genresViewData)
         
+        let overviewTitleViewData = TextViewData(text: "Overview", style: .headline)
+        let overviewTitleComponent = MovieComponents.text(viewData: overviewTitleViewData)
+        
         let overviewViewData = TextViewData(text: dependencies.movie.overview)
         let overviewComponent = MovieComponents.text(viewData: overviewViewData)
         
         let popularityViewData = TextViewData(text: dependencies.movie.popularity.description)
         let popularityComponent = MovieComponents.text(viewData: popularityViewData)
         
-        let releaseViewData = TextViewData(text: dependencies.movie.releaseDate.description)
+        let releaseViewData = TextViewData(text: dependencies.movie.releaseDate.toSring(format: .dayMonthYearComa))
         let releaseComponent = MovieComponents.text(viewData: releaseViewData)
         
         let languagesViewData = TextViewData(text: dependencies.movie.originalLanguage)
@@ -91,7 +95,8 @@ class MovieViewModel: MovieViewModelInputs, MovieViewModelType, MovieViewModelOu
         let statusViewData = TextViewData(text: dependencies.movie.title)
         let statusComponent = MovieComponents.text(viewData: statusViewData)
         
-        components = [titleComponent, posterComponent, genresComponent, overviewComponent,
+        components = [titleComponent, posterComponent, genresComponent,
+                      overviewTitleComponent, overviewComponent,
                       popularityComponent, releaseComponent, languagesComponent, rateComponent,
                       statusComponent]
     }

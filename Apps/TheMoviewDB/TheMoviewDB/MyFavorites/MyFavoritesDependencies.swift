@@ -30,7 +30,7 @@ class MyFavoritesDependencies: ListGridViewSetComponentsType, ListGridViewDelega
         popularMovies = data
         if components.isEmpty {
             components = [.text(viewData: TextViewData(text: "Sin favoritos",
-                                                       font: .largeTitle))]
+                                                       style: .title))]
         }
         return components
     }

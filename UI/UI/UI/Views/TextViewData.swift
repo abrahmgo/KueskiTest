@@ -11,11 +11,11 @@ public struct TextViewData: TextViewDataType, Identifiable {
     
     public let id = UUID()
     public let text: String
-    public let font: Font
+    public let style: TextStyle
     
     public init(text: String = "",
-                font: Font = .body) {
+                style: TextStyle = .body) {
         self.text = text
-        self.font = font
+        self.style = style
     }
 }

@@ -25,6 +25,7 @@
 		B68F49A52BAF3E97002655DD /* CoreDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68F49A42BAF3E97002655DD /* CoreDataSource.framework */; };
 		B68F49B02BAF53BC002655DD /* CoreRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68F49AF2BAF53BC002655DD /* CoreRemoteDataSource.swift */; };
 		B6A860592BB3C577006BB61B /* PopularMovies.json in Resources */ = {isa = PBXBuildFile; fileRef = B6A860582BB3C577006BB61B /* PopularMovies.json */; };
+		B6A860862BB3E1F2006BB61B /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A860852BB3E1F2006BB61B /* Utils.framework */; };
 		DA6349619ABCE8370C2D3DB1 /* Pods_APICore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9783A9B39D338C77DF20A6 /* Pods_APICore.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		B68F49A42BAF3E97002655DD /* CoreDataSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreDataSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B68F49AF2BAF53BC002655DD /* CoreRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreRemoteDataSource.swift; sourceTree = "<group>"; };
 		B6A860582BB3C577006BB61B /* PopularMovies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PopularMovies.json; sourceTree = "<group>"; };
+		B6A860852BB3E1F2006BB61B /* Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				B68F49A52BAF3E97002655DD /* CoreDataSource.framework in Frameworks */,
 				B68F49932BAF3A37002655DD /* CoreEntities.framework in Frameworks */,
 				DA6349619ABCE8370C2D3DB1 /* Pods_APICore.framework in Frameworks */,
+				B6A860862BB3E1F2006BB61B /* Utils.framework in Frameworks */,
 				B68F49972BAF3C57002655DD /* NetworkCore.framework in Frameworks */,
 				B60253DC2BB2403B00890644 /* Realm in Frameworks */,
 			);
@@ -89,6 +92,7 @@
 		71E7E89C35CF9F29F090B732 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B6A860852BB3E1F2006BB61B /* Utils.framework */,
 				B68F49A42BAF3E97002655DD /* CoreDataSource.framework */,
 				B68F49962BAF3C57002655DD /* NetworkCore.framework */,
 				B68F49922BAF3A37002655DD /* CoreEntities.framework */,

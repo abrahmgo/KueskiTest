@@ -50,6 +50,8 @@
 		B69E00EB2BB1DDE10035179E /* Features.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B69E00E92BB1DDE10035179E /* Features.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B69E00ED2BB1DDE70035179E /* NetworkCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B69E00EC2BB1DDE70035179E /* NetworkCore.framework */; };
 		B69E00EE2BB1DDE70035179E /* NetworkCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B69E00EC2BB1DDE70035179E /* NetworkCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B6A8608A2BB3E1FD006BB61B /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A860892BB3E1FD006BB61B /* Utils.framework */; };
+		B6A8608B2BB3E1FD006BB61B /* Utils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6A860892BB3E1FD006BB61B /* Utils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,7 @@
 				B69E00DC2BB1DDCA0035179E /* CoreDataSource.framework in Embed Frameworks */,
 				B69E00D52BB1DDC30035179E /* Analytics.framework in Embed Frameworks */,
 				B60253EE2BB2694500890644 /* UI.framework in Embed Frameworks */,
+				B6A8608B2BB3E1FD006BB61B /* Utils.framework in Embed Frameworks */,
 				B69E00EB2BB1DDE10035179E /* Features.framework in Embed Frameworks */,
 				B69E00E22BB1DDD30035179E /* CoreUseCases.framework in Embed Frameworks */,
 				B69E00E52BB1DDD80035179E /* Features.framework in Embed Frameworks */,
@@ -131,6 +134,7 @@
 		B69E00E62BB1DDDC0035179E /* Features.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Features.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B69E00E92BB1DDE10035179E /* Features.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Features.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B69E00EC2BB1DDE70035179E /* NetworkCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6A860892BB3E1FD006BB61B /* Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB2B259A56D357F65E27B21E /* Pods-TheMoviewDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheMoviewDB.debug.xcconfig"; path = "Target Support Files/Pods-TheMoviewDB/Pods-TheMoviewDB.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +147,7 @@
 				B69E00D82BB1DDC60035179E /* APICore.framework in Frameworks */,
 				B69E00ED2BB1DDE70035179E /* NetworkCore.framework in Frameworks */,
 				B69E00E72BB1DDDC0035179E /* Features.framework in Frameworks */,
+				B6A8608A2BB3E1FD006BB61B /* Utils.framework in Frameworks */,
 				B69E00DB2BB1DDCA0035179E /* CoreDataSource.framework in Frameworks */,
 				B69E00D42BB1DDC30035179E /* Analytics.framework in Frameworks */,
 				B69E00EA2BB1DDE10035179E /* Features.framework in Frameworks */,
@@ -289,6 +294,7 @@
 		B69E00D22BB1DDC30035179E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B6A860892BB3E1FD006BB61B /* Utils.framework */,
 				B60253EC2BB2694500890644 /* UI.framework */,
 				B69E00EC2BB1DDE70035179E /* NetworkCore.framework */,
 				B69E00E92BB1DDE10035179E /* Features.framework */,
