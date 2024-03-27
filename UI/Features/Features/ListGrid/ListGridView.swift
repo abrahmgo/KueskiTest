@@ -84,6 +84,7 @@ struct ListGridView: View {
                             ForEach(0..<elements.count, id: \.self) { item in
                                 Button {
                                     delegate?.itemFilterSelected(index: item)
+                                    viewModel.inputs.requestMoreData()
                                 } label: {
                                     Label(elements[item], systemImage: "line.3.horizontal.decrease.circle")
                                 }

@@ -35,11 +35,18 @@ enum PopularMoviesEndpoint: NetworkTargetType {
     var parameters: Parameters? {
         switch self {
         case .service(let model):
-            return ["include_adult": model.includeAdult.description,
-                    "include_video": model.includeVideo.description,
-                    "language": model.language.rawValue,
-                    "page": "\(model.page)",
-                    "sort_by": model.sort.rawValue]
+            var param = ["include_adult": model.includeAdult.description,
+                         "include_video": model.includeVideo.description,
+                         "language": model.language.rawValue,
+                         "page": "\(model.page)",
+                         "sort_by": model.sort.rawValue]
+            if let minDate = model.minDate,
+               let maxDate = model.maxDate {
+                param["with_release_type"] =  "2|3"
+                param[ "release_date.gte"] = minDate.description
+                param["release_date.lte"] = maxDate.description
+            }
+            return param
         }
     }
     

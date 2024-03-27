@@ -14,24 +14,34 @@ import SwiftUI
 class HomeDependencies: ListGridViewSetComponentsType, ListGridViewDelegate {
     
     private let getPopularMoviesUseCase: GetPopularMoviesWPaginationUseCaseType
+    private let getPlayingMoviesUseCase: GetPopularMoviesWPaginationUseCaseType
     private var popularMovies: [PopularMovie] = []
     private let router: HomeRouterType
+    private var currentFilter: HomeFilterType = .popular
     
     init(getPopularMoviesUseCase: GetPopularMoviesWPaginationUseCaseType,
+         getPlayingMoviesUseCase: GetPopularMoviesWPaginationUseCaseType,
          router: HomeRouterType) {
         self.getPopularMoviesUseCase = getPopularMoviesUseCase
+        self.getPlayingMoviesUseCase = getPlayingMoviesUseCase
         self.router = router
     }
     
     func execute() async throws -> [Features.ListGridComponents] {
-        let model = PopularMoviesRequest(includeAdult: false,
+        var model = PopularMoviesRequest(includeAdult: false,
                                          includeVideo: false,
                                          language: .us,
                                          sort: .popularityDesc)
-        let data = try await getPopularMoviesUseCase.execute(model: model)
-        let viewData = data.map({ImageViewData(url: $0.poster)})
+        if currentFilter == .playing {
+            model.maxDate = Date()
+            model.minDate = Date()
+            popularMovies = try await getPlayingMoviesUseCase.execute(model: model)
+        } else {
+            
+            popularMovies = try await getPopularMoviesUseCase.execute(model: model)
+        }
+        let viewData = popularMovies.map({ImageViewData(url: $0.poster)})
         let components = viewData.map({ListGridComponents.image(viewData: $0)})
-        popularMovies = data
         return components
     }
     
@@ -41,7 +51,7 @@ class HomeDependencies: ListGridViewSetComponentsType, ListGridViewDelegate {
     }
     
     func itemFilterSelected(index: Int) {
-        print(elements[index])
+        currentFilter = elements[index] as? HomeFilterType ?? .popular
     }
 }
 

@@ -15,6 +15,7 @@
 		B68F49BC2BAF5978002655DD /* CoreDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68F49BB2BAF5978002655DD /* CoreDataSource.framework */; };
 		B68F49C02BAF5986002655DD /* CoreEntities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68F49BF2BAF5986002655DD /* CoreEntities.framework */; };
 		B68F49C42BAF5990002655DD /* APICore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68F49C32BAF5990002655DD /* APICore.framework */; };
+		B6A8605D2BB3DFDE006BB61B /* GetPlayingMoviesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A8605C2BB3DFDE006BB61B /* GetPlayingMoviesUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		B68F49BB2BAF5978002655DD /* CoreDataSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreDataSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B68F49BF2BAF5986002655DD /* CoreEntities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreEntities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B68F49C32BAF5990002655DD /* APICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6A8605C2BB3DFDE006BB61B /* GetPlayingMoviesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlayingMoviesUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			children = (
 				B68F49B82BAF596D002655DD /* GetPopularMoviesUseCase.swift */,
 				B60253D82BB2306F00890644 /* ManageFavoriteMovieUseCase.swift */,
+				B6A8605C2BB3DFDE006BB61B /* GetPlayingMoviesUseCase.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B68F49B92BAF596D002655DD /* GetPopularMoviesUseCase.swift in Sources */,
+				B6A8605D2BB3DFDE006BB61B /* GetPlayingMoviesUseCase.swift in Sources */,
 				B60253D92BB2306F00890644 /* ManageFavoriteMovieUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
