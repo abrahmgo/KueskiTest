@@ -19,6 +19,8 @@ struct HomeDependenciesFactory {
                                             getPlayingMoviesUseCase: usecasePlaying,
                                             router: router)
         return ListGridDependencies(columns: 3, components: dependencies, 
-                                    delegate: dependencies, withFilter: true, dataFilter: dependencies)
+                                    delegate: dependencies, withFilter: true, 
+                                    dataFilter: dependencies,
+                                    titleObserver: dependencies.titleObserver)
     }
 }

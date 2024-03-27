@@ -10,6 +10,7 @@ import CoreUseCases
 import CoreEntities
 import UI
 import SwiftUI
+import Combine
 
 class HomeDependencies: ListGridViewSetComponentsType, ListGridViewDelegate {
     
@@ -18,6 +19,7 @@ class HomeDependencies: ListGridViewSetComponentsType, ListGridViewDelegate {
     private var popularMovies: [PopularMovie] = []
     private let router: HomeRouterType
     private var currentFilter: HomeFilterType = .popular
+    let titleObserver: CurrentValueSubject<String, Never>? = CurrentValueSubject("Pelicular Populares")
     
     init(getPopularMoviesUseCase: GetPopularMoviesWPaginationUseCaseType,
          getPlayingMoviesUseCase: GetPopularMoviesWPaginationUseCaseType,
@@ -52,6 +54,12 @@ class HomeDependencies: ListGridViewSetComponentsType, ListGridViewDelegate {
     
     func itemFilterSelected(index: Int) {
         currentFilter = elements[index] as? HomeFilterType ?? .popular
+        switch currentFilter {
+        case .popular:
+            titleObserver?.send("Peliculas Populares")
+        case .playing:
+            titleObserver?.send("Peliculas de esta semana")
+        }
     }
 }
 

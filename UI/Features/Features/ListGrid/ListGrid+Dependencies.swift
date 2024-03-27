@@ -6,11 +6,13 @@
 //
 
 import CoreEntities
+import Combine
 import SwiftUI
 
 protocol ListGridViewModelOutputs {
     var order: ContentOrder { get }
     var components: [ListGridComponents] { get }
+    var viewTitle: String? { get }
     
     func getColumns(order: ContentOrder, side: CGFloat) -> [GridItem]
     func showFilter() -> Bool
@@ -45,18 +47,21 @@ public struct ListGridDependencies {
     public let reloadDataViewWillAppear: Bool
     public let withFilter: Bool
     public let dataFilter: ListGridViewFilter?
+    public let titleObserver: CurrentValueSubject<String, Never>?
     
     public init(columns: Int, 
                 components: ListGridViewSetComponentsType,
                 delegate: ListGridViewDelegate? = nil,
                 reloadDataViewWillAppear: Bool = false,
                 withFilter: Bool = false,
-                dataFilter: ListGridViewFilter? = nil) {
+                dataFilter: ListGridViewFilter? = nil,
+                titleObserver: CurrentValueSubject<String, Never>? = nil) {
         self.columns = columns
         self.components = components
         self.delegate = delegate
         self.reloadDataViewWillAppear = reloadDataViewWillAppear
         self.withFilter = withFilter
         self.dataFilter = dataFilter
+        self.titleObserver = titleObserver
     }
 }

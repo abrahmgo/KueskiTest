@@ -23,6 +23,10 @@ struct ListGridView: View {
     var body: some View {
         GeometryReader { geometry in
             ScrollView([.vertical], showsIndicators: true) {
+                if let title = viewModel.outputs.viewTitle {
+                    Text(title)
+                        .font(.title)
+                }
                 let side = geometry.size.width / 4
                 let colums = viewModel.outputs.getColumns(order: viewModel.order, side: side)
                 let elements = viewModel.outputs.components.count

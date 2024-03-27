@@ -10,6 +10,7 @@ import CoreEntities
 import UI
 import NukeUI
 import NukeExtensions
+import Combine
 
 class ListGridViewModel: ListGridViewModelInputs, ListGridViewModelType, ListGridViewModelOutputs, ObservableObject {
     
@@ -20,14 +21,17 @@ class ListGridViewModel: ListGridViewModelInputs, ListGridViewModelType, ListGri
     // MARK: Outputs
     @Published public var order: ContentOrder = .grid
     @Published public var components: [ListGridComponents] = []
+    @Published public var viewTitle: String?
     
     // MARK: Private
     private let dependencies: ListGridDependencies
+    private var cancellable = Set<AnyCancellable>()
     
     init(dependencies: ListGridDependencies) {
         self.dependencies = dependencies
         
         setComponents()
+        bind()
     }
     
     func setComponents() {
@@ -73,5 +77,11 @@ class ListGridViewModel: ListGridViewModelInputs, ListGridViewModelType, ListGri
     
     func getTitlesFilter() -> [String] {
         return dependencies.dataFilter?.elements.map({$0.rawValue as? String ?? ""}) ?? []
+    }
+    
+    private func bind() {
+        dependencies.titleObserver?.sink(receiveValue: { title in
+            self.viewTitle = title
+        }).store(in: &cancellable)
     }
 }
